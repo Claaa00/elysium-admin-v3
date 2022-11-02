@@ -1,0 +1,504 @@
+body,
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  font-family: "Dm Sans", sans-serif;
+  color: #333;
+  letter-spacing: 1px;
+}
+
+h1 {
+  font-size: 27px;
+  font-weight: bold;
+}
+
+h2 {
+  font-size: 21px;
+  font-weight: bold;
+}
+
+strong {
+  font-size: 17px;
+  font-weight: 500;
+}
+
+label,
+p,
+th,
+td,
+.btn {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+p {
+  /* opacity: 0.8; */
+  color: rgba(51, 51, 51, 0.75);
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+li {
+  list-style: none;
+}
+
+.fixed-width {
+  max-width: 1246px;
+  margin: auto;
+}
+
+.flex-items {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/*=============== 
+      HEADER
+=================*/
+
+.header-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  background-color: #08182f;
+  color: white;
+}
+
+.header-container .page-header {
+  height: 100%;
+  padding: 0 30px;
+}
+
+/*=====================
+      HEADER-logo
+=======================*/
+
+.header-container .page-header .logo-container {
+  height: 100%;
+}
+
+.header-container .page-header .logo-container img {
+  width: 35px;
+  height: 35px;
+}
+
+.header-container .page-header .logo-container .logo-name {
+  color: white;
+  line-height: 50px;
+}
+
+/*=====================
+      HEADER-nav
+=======================*/
+
+.header-container .page-header .nav-container {
+  height: 100%;
+  line-height: 50px;
+}
+
+.header-container .page-header .nav-container .links {
+  display: flex;
+}
+
+.header-container .page-header .nav-container .links li {
+  margin-right: 5px;
+  height: 45px;
+  transition: all 0.15s;
+}
+
+.header-container .page-header .nav-container .links li a {
+  color: white;
+  font-size: 14px;
+  font-weight: 400;
+  white-space: nowrap;
+  height: 100%;
+  padding: 5px 20px;
+}
+
+.header-container .page-header .nav-container .links li:hover,
+.header-container .page-header .nav-container .links .active {
+  border-bottom: 3px solid rgba(250, 250, 250, 0.5);
+}
+
+.header-container .page-header .nav-container .links .active a {
+  font-weight: 500;
+}
+
+/*=====================
+      HEADER-nav-aside
+=======================*/
+
+.header-container .page-header .menu-bar {
+  display: none;
+}
+
+.header-container .page-header .nav-container .sidebar-logo {
+  display: none;
+}
+
+/*=====================
+      HEADER-other
+=======================*/
+
+.header-container .page-header .other-container {
+  height: 50px;
+  position: relative;
+}
+
+/*======================================
+      HEADER-other-search-focus
+========================================*/
+
+.header-container .page-header .other-container .search-focus {
+  position: relative;
+  margin-right: 5px;
+}
+
+.header-container .page-header .other-container .search-focus input {
+  padding: 5px;
+  width: 35px;
+  height: 30px;
+  background: none;
+  font-size: 14px;
+  color: white;
+  border: none;
+  transition: 0.5s;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+
+.header-container .page-header .other-container .search-focus:hover input {
+  width: 200px;
+  background: rgba(250, 250, 250, 0.2);
+  border-radius: 5px;
+  height: 30px;
+  border: 1px solid white;
+  border-radius: 5px;
+  outline: none;
+}
+
+.header-container .page-header .other-container .search-focus i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 14px;
+  color: white;
+  transition: 0.2s;
+  line-height: 15px;
+}
+
+.header-container .page-header .other-container .search-focus:hover i {
+  opacity: 0;
+  z-index: -1;
+}
+
+/*======================================
+      HEADER-other-add-button
+========================================*/
+
+.header-container .page-header .other-container .add-button {
+  width: 30px;
+  margin-right: 10px;
+  line-height: 35px;
+  text-align: center;
+  border: none;
+  background: none;
+}
+
+.header-container .page-header .other-container .add-button a i {
+  font-size: 14px;
+  color: white;
+}
+
+/*======================================
+      HEADER-other-profile-sub-menu
+========================================*/
+
+.header-container .page-header .other-container .profile-dropdown {
+  width: 35px;
+  height: 35px;
+  margin-left: 5px;
+  border-radius: 50%;
+}
+
+.header-container .page-header .other-container .profile-dropdown button {
+  border-radius: 100%;
+  border: none;
+  width: 100%;
+  height: 100%;
+}
+
+.header-container .page-header .other-container .profile-dropdown button img {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+}
+
+.header-container
+  .page-header
+  .other-container
+  .profile-dropdown
+  .profile-sub-menu {
+  background-color: white;
+  color: #333;
+  position: absolute;
+  top: 110%;
+  right: 0%;
+  width: 300px;
+  /* height: fit-content; */
+  max-height: 0px;
+  line-height: 40px;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+  /* display: none; */
+  opacity: 0;
+  visibility: hidden;
+  z-index: 1;
+  transition: all 0.35s;
+}
+
+.header-container
+  .page-header
+  .other-container
+  .profile-dropdown:hover
+  .profile-sub-menu,
+.header-container
+  .page-header
+  .other-container
+  .profile-dropdown:focus
+  .profile-sub-menu {
+  /* display: block; */
+  max-height: fit-content;
+  visibility: visible;
+  opacity: 1;
+}
+
+.header-container
+  .page-header
+  .other-container
+  .profile-dropdown
+  .profile-sub-menu
+  .profile-details {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  background-color: #08182f;
+  color: white;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.header-container
+  .page-header
+  .other-container
+  .profile-dropdown
+  .profile-sub-menu
+  .profile-details
+  img {
+  width: 70px;
+  height: 70px;
+  margin-right: 10px;
+  background-color: white;
+  border-radius: 50%;
+}
+
+.header-container
+  .page-header
+  .other-container
+  .profile-dropdown
+  .profile-sub-menu
+  .profile-details
+  .user-details {
+  text-align: left;
+  line-height: 20px;
+}
+
+.header-container
+  .page-header
+  .other-container
+  .profile-dropdown
+  .profile-sub-menu
+  .profile-details
+  .user-details
+  .user-position {
+  margin-top: 5px;
+}
+
+.header-container
+  .page-header
+  .other-container
+  .profile-dropdown
+  .profile-sub-menu
+  .profile-details
+  .user-details
+  .user-name,
+.header-container
+  .page-header
+  .other-container
+  .profile-dropdown
+  .profile-sub-menu
+  .profile-details
+  .user-details
+  .user-position {
+  display: block;
+}
+
+.header-container
+  .page-header
+  .other-container
+  .profile-dropdown
+  .profile-sub-menu
+  .sub-menu-options {
+  padding: 0 20px;
+  border: 1px solid rgba(8, 24, 47, 1);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.header-container
+  .page-header
+  .other-container
+  .profile-dropdown
+  .profile-sub-menu
+  .sub-menu-options
+  li {
+  padding: 0 10px 0 10px;
+  margin: 10px 0;
+}
+
+.header-container
+  .page-header
+  .other-container
+  .profile-dropdown
+  .profile-sub-menu
+  .sub-menu-options
+  li
+  a {
+  color: #333;
+  font-size: 14px;
+  font-weight: 400;
+  white-space: nowrap;
+  transition: all 0.15s;
+}
+
+.header-container
+  .page-header
+  .other-container
+  .profile-dropdown
+  .profile-sub-menu
+  .sub-menu-options
+  li:hover
+  a {
+  font-weight: bold;
+}
+
+/*=============== 
+      CONTENT
+=================*/
+
+/*=============== 
+      MEDIA
+=================*/
+
+@media (max-width: 800px) {
+  .header-container .page-header .nav-container .links li a {
+    padding: 5px 10px;
+  }
+}
+
+@media (max-width: 650px) {
+  /*=============== 
+      MEDIA-header
+=================*/
+
+  .header-container .page-header .menu-bar {
+    display: block;
+  }
+
+  .header-container .page-header .nav-container {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    max-width: 250px;
+    width: 100%;
+    background-color: #08182f;
+    padding: 20px;
+    line-height: 40px;
+    transition: all 0.5s ease;
+    z-index: 100;
+  }
+
+  .header-container .page-header .nav-container .sidebar-logo {
+    display: flex;
+  }
+
+  .header-container
+    .page-header
+    .nav-container
+    .sidebar-logo
+    .logo-container
+    img {
+    width: 35px;
+    height: 35px;
+  }
+
+  .header-container
+    .page-header
+    .nav-container
+    .sidebar-logo
+    .logo-container
+    .logo-name {
+    color: white;
+    line-height: 50px;
+  }
+
+  .header-container .page-header .menu-bar,
+  .header-container .page-header .nav-container .sidebar-logo i {
+    color: white;
+    font-size: 17px;
+  }
+
+  .header-container .page-header .nav-container .links {
+    display: block;
+    margin-top: 20px;
+    width: 100%;
+  }
+
+  .header-container .page-header .nav-container .links li {
+    margin-right: 0;
+    margin-bottom: 5px;
+    padding: 5px 20px;
+  }
+
+  .header-container .page-header .nav-container .links li:last-child {
+    margin-bottom: 0;
+  }
+
+  .header-container .page-header .nav-container .links li:hover,
+  .header-container .page-header .nav-container .links .active {
+    border-bottom: none;
+    border-left: 5px solid rgba(250, 250, 250, 0.5);
+  }
+
+  .header-container .page-header .nav-container .links li a {
+    padding: 0;
+  }
+}

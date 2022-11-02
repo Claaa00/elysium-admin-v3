@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+
+    <link
+      rel="stylesheet"
+      href="http://meyerweb.com/eric/tools/css/reset/reset.css"
+    />
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="assets/fontawesome-free-6.1.2-web/css/all.css"
+      rel="stylesheet"
+    />
+
+    <title>Elysium - Admin</title>
+  </head>
+
+  <body>
+    <header class="header-container">
+      <div class="page-header fixed-width flex-items">
+        <i class="fa-solid fa-bars menu-bar" id="menuBar"></i>
+
+        <a href="index.html" class="logo-container flex-items">
+          <img src="/assets/images/e-removebg-preview.png" />
+          <h1 class="logo-name">lysium</h1>
+        </a>
+
+        <nav class="nav-container" id="navs">
+          <aside class="sidebar-logo flex-items">
+            <a href="index.html" class="logo-container flex-items">
+              <img src="/assets/images/e-removebg-preview.png" />
+              <h1 class="logo-name">lysium</h1>
+            </a>
+
+            <i class="fa-solid fa-xmark close-btn" id="closeBtn"></i>
+          </aside>
+
+          <ul class="links">
+            <li class="active"><a href="index.html">Dashboard</a></li>
+            <li><a href="#">Records</a></li>
+            <li><a href="#">Settings</a></li>
+            <li><a href="#">Map</a></li>
+          </ul>
+        </nav>
+        <div class="other-container flex-items">
+          <div class="search-focus">
+            <form name="search">
+              <input
+                type="text"
+                class="input"
+                name="txt"
+                onblur="this.placeholder=''"
+                onmouseover="this.placeholder='Search...'"
+                onmouseout="this.value = ''; this.blur(); this.placeholder='';"
+              />
+            </form>
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+
+          <button class="add-button">
+            <a href="#">
+              <i class="fa-solid fa-plus"></i>
+            </a>
+          </button>
+
+          <div class="profile-dropdown">
+            <button class="profile-image">
+              <img src="assets/images/OpenPeeps-AvatarandBackdrop.png" />
+            </button>
+
+            <div class="profile-sub-menu dropdown">
+              <div class="profile-details">
+                <img src="assets/images/OpenPeeps-AvatarandBackdrop.png" />
+                <div class="user-details">
+                  <strong class="user-name">Juan Tamad</strong>
+                  <label class="user-position">Admin</label>
+                </div>
+              </div>
+              <ul class="sub-menu-options">
+                <li><a href="#">Profile Settings</a></li>
+                <li><a href="#">Log Out</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="content-container">
+      <div class="page-content fixed-width">asdasdasd</div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
