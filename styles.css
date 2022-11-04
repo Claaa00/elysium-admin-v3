@@ -167,6 +167,7 @@ table tr:last-child td:last-child {
   width: fit-content;
   block-size: fit-content;
   border: 1px solid;
+  outline: none;
 }
 
 /*=============== 
@@ -844,6 +845,7 @@ table tr:last-child td:last-child {
   color: white;
   font-size: 14px;
   border-color: #08182f;
+  transition: all 0.2s ease;
 }
 
 .content-container .page-content .page-info .add-record-btn i {
@@ -871,16 +873,37 @@ table tr:last-child td:last-child {
   border-color: rgba(51, 51, 51, 0.5);
 }
 
+.content-container .page-content .search-and-filters .search input:hover,
+.content-container .page-content .search-and-filters .search input:focus {
+  border-color: #08182f;
+}
+
 .content-container .page-content .search-and-filters .search .search-btn {
   border-color: #08182f;
   color: white;
   background-color: #08182f;
+  outline: none;
+  transition: all 0.2s ease;
+}
+
+.content-container .page-content .search-and-filters .search .search-btn:hover,
+.content-container .page-content .page-info .add-record-btn:hover {
+  background-color: white;
+  color: #333;
+  border-color: rgba(51, 51, 51, 0.5);
 }
 
 .content-container .page-content .search-and-filters .btn-group .saf-btn {
   border-color: rgba(51, 51, 51, 0.5);
   color: #333;
   background: none;
+  transition: all 0.2s ease;
+}
+
+.content-container .page-content .search-and-filters .btn-group .saf-btn:hover {
+  background-color: #08182f;
+  color: white;
+  border-color: #08182f;
 }
 
 .content-container .page-content .search-and-filters .btn-group .saf-btn i {
