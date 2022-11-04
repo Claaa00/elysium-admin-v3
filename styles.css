@@ -109,7 +109,8 @@ table {
   border-collapse: separate;
   border-spacing: 0;
   /* min-width: 350px; */
-  max-width: 100%;
+  width: 100%;
+  table-layout: auto;
 }
 
 table tr th {
@@ -117,6 +118,7 @@ table tr th {
   border-bottom: 1px solid #08182f;
   padding: 15px;
   text-transform: uppercase;
+  vertical-align: middle;
 }
 
 table tr td {
@@ -124,6 +126,7 @@ table tr td {
   border-bottom: 1px solid rgba(51, 51, 51, 0.25);
   padding: 15px;
   background-color: white;
+  vertical-align: middle;
 }
 table tr th:first-child {
   border-left: 1px solid #08182f;
@@ -159,16 +162,11 @@ table tr:last-child td:last-child {
   border-bottom-right-radius: 0px;
 }
 
-.table-container {
-  max-height: 327px;
-  /* border-bottom: 1px solid rgba(51, 51, 51, 0.25); */
-}
-
 .btn {
   padding: 5px 15px;
   width: fit-content;
   block-size: fit-content;
-  border: none;
+  border: 1px solid;
 }
 
 /*=============== 
@@ -547,16 +545,16 @@ table tr:last-child td:last-child {
   margin-top: 5px;
 }
 
-.content-container .page-content .main-content {
-  margin-top: 30px;
-  width: 100%;
-}
-
 /*============================
       CONTENT-dashboard
 ============================*/
 
-.content-container .page-content .dashboard-grid {
+.content-container .page-content .dashboard-container {
+  margin-top: 30px;
+  width: 100%;
+}
+
+.content-container .page-content .dashboard-container {
   display: grid;
   max-width: 1246px;
   grid-template-columns: 1fr 3fr;
@@ -568,14 +566,14 @@ table tr:last-child td:last-child {
       CONTENT-dashboard-statistics
 =====================================*/
 
-.content-container .page-content .main-content .statistics-grid {
+.content-container .page-content .dashboard-container .statistics-grid {
   width: 100%;
   /* max-height: 445px; */
 }
 
 .content-container
   .page-content
-  .main-content
+  .dashboard-container
   .statistics-grid
   .greetings-message {
   width: 100%;
@@ -585,7 +583,7 @@ table tr:last-child td:last-child {
 
 .content-container
   .page-content
-  .main-content
+  .dashboard-container
   .statistics-grid
   .greetings-message
   .greeting {
@@ -594,7 +592,7 @@ table tr:last-child td:last-child {
 
 .content-container
   .page-content
-  .main-content
+  .dashboard-container
   .statistics-grid
   .statistics-container {
   background-color: #08182f;
@@ -604,7 +602,7 @@ table tr:last-child td:last-child {
 
 .content-container
   .page-content
-  .main-content
+  .dashboard-container
   .statistics-grid
   .statistics-container
   .statistics {
@@ -615,7 +613,7 @@ table tr:last-child td:last-child {
 
 .content-container
   .page-content
-  .main-content
+  .dashboard-container
   .statistics-grid
   .statistics-container
   .statistics
@@ -627,7 +625,7 @@ table tr:last-child td:last-child {
 
 .content-container
   .page-content
-  .main-content
+  .dashboard-container
   .statistics-grid
   .statistics-container
   .statistics
@@ -649,7 +647,7 @@ table tr:last-child td:last-child {
 
 .content-container
   .page-content
-  .main-content
+  .dashboard-container
   .statistics-grid
   .statistics-container
   .statistics
@@ -668,19 +666,31 @@ table tr:last-child td:last-child {
       CONTENT-dashboard-latest-records
 =========================================*/
 
-.content-container .page-content .main-content .latest-records-grid {
+.content-container .page-content .dashboard-container .latest-records-grid {
   max-width: 100%;
   color: #333;
 }
 
 .content-container
   .page-content
-  .main-content
+  .dashboard-container
+  .latest-records-grid
+  .table-container {
+  max-height: 326px;
+}
+
+/* .content-container
+  .page-content
+  .dashboard-container
   .latest-records-grid
   .table-container,
-.content-container .page-content .main-content .latest-records-grid .table {
+.content-container
+  .page-content
+  .dashboard-container
+  .latest-records-grid
+  .table {
   width: 100%;
-}
+} */
 
 /*=====================================
       CONTENT-dashboard-activities
@@ -688,7 +698,7 @@ table tr:last-child td:last-child {
 
 .content-container
   .page-content
-  .dashboard-grid
+  .dashboard-container
   .activities-grid
   .activity-container {
   max-height: 290px;
@@ -697,7 +707,7 @@ table tr:last-child td:last-child {
 
 .content-container
   .page-content
-  .dashboard-grid
+  .dashboard-container
   .activities-grid
   .activity-container
   .activities
@@ -709,7 +719,7 @@ table tr:last-child td:last-child {
 
 .content-container
   .page-content
-  .dashboard-grid
+  .dashboard-container
   .activities-grid
   .activity-container
   .activities
@@ -719,7 +729,7 @@ table tr:last-child td:last-child {
 
 .content-container
   .page-content
-  .dashboard-grid
+  .dashboard-container
   .activities-grid
   .activity-container
   .activities
@@ -731,7 +741,7 @@ table tr:last-child td:last-child {
 
 .content-container
   .page-content
-  .dashboard-grid
+  .dashboard-container
   .activities-grid
   .activity-container
   .activities
@@ -749,7 +759,7 @@ table tr:last-child td:last-child {
 
 .content-container
   .page-content
-  .dashboard-grid
+  .dashboard-container
   .activities-grid
   .activity-container
   .activities
@@ -764,7 +774,7 @@ table tr:last-child td:last-child {
 
 .content-container
   .page-content
-  .dashboard-grid
+  .dashboard-container
   .activities-grid
   .activity-container
   .activities
@@ -785,7 +795,7 @@ table tr:last-child td:last-child {
 
 .content-container
   .page-content
-  .dashboard-grid
+  .dashboard-container
   .map-overview-grid
   .map-overview {
   text-align: center;
@@ -795,7 +805,7 @@ table tr:last-child td:last-child {
 
 .content-container
   .page-content
-  .dashboard-grid
+  .dashboard-container
   .map-overview-grid
   .map-overview
   .map-container
@@ -808,7 +818,7 @@ table tr:last-child td:last-child {
 
 .content-container
   .page-content
-  .dashboard-grid
+  .dashboard-container
   .map-overview-grid
   .map-overview
   .open-map {
@@ -821,12 +831,179 @@ table tr:last-child td:last-child {
   transform: translate(-50%, -50%);
 }
 
+/*===========================
+      CONTENT-records
+===========================*/
+
+/*=================================
+      CONTENT-records-page-info
+=================================*/
+
+.content-container .page-content .page-info .add-record-btn {
+  background-color: #08182f;
+  color: white;
+  font-size: 14px;
+  border-color: #08182f;
+}
+
+.content-container .page-content .page-info .add-record-btn i {
+  margin-right: 5px;
+}
+
+/*============================================
+      CONTENT-records-search-and-filters
+============================================*/
+
+.content-container .page-content .search-and-filters {
+  margin-top: 30px;
+}
+
+.content-container .page-content .search-and-filters .search input {
+  padding: 5px;
+  width: 200px;
+  height: 28px;
+  font-size: 14px;
+  color: #333;
+  letter-spacing: 1px;
+  font-weight: 400;
+  border: 1px solid #333;
+  outline: none;
+  border-color: rgba(51, 51, 51, 0.5);
+}
+
+.content-container .page-content .search-and-filters .search .search-btn {
+  border-color: #08182f;
+  color: white;
+  background-color: #08182f;
+}
+
+.content-container .page-content .search-and-filters .btn-group .saf-btn {
+  border-color: rgba(51, 51, 51, 0.5);
+  color: #333;
+  background: none;
+}
+
+.content-container .page-content .search-and-filters .btn-group .saf-btn i {
+  margin-right: 5px;
+}
+
+/*============================================
+      CONTENT-records-record-container
+============================================*/
+
+.content-container .page-content .record-container {
+  max-width: 100%;
+  color: #333;
+  margin-top: 15px;
+  max-height: 785px;
+}
+
+.content-container .page-content .record-container .table-container {
+  max-height: 500px;
+}
+
+/* .content-container .page-content .record-container .table-container,
+.content-container .page-content .record-container .table {
+  width: 100%;
+} */
+
+.content-container
+  .page-content
+  .record-container
+  .table-container
+  .table
+  tbody
+  tr
+  td:last-child,
+.content-container
+  .page-content
+  .record-container
+  .table-container
+  .table
+  thead
+  tr
+  th:last-child {
+  width: 50px;
+  text-align: center;
+}
+
+.content-container
+  .page-content
+  .record-container
+  .table-container
+  .table
+  tbody
+  tr
+  td
+  i {
+  font-size: 14px;
+  color: #333;
+}
+
+/*======================================================
+      CONTENT-records-record-container-pagination
+======================================================*/
+
+.content-container .page-content .record-container .table-pagination {
+  width: 100%;
+  margin-top: 15px;
+  /* justify-content: center;
+  align-items: center; */
+  text-align: center;
+}
+
+.content-container
+  .page-content
+  .record-container
+  .table-pagination
+  .pagination {
+  display: inline-block;
+}
+
+.content-container
+  .page-content
+  .record-container
+  .table-pagination
+  .pagination
+  a {
+  color: #333;
+  float: left;
+  padding-top: 10px;
+  text-decoration: none;
+  width: 35px;
+  height: 35px;
+  text-align: center;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+
+.content-container
+  .page-content
+  .record-container
+  .table-pagination
+  .pagination
+  a.active {
+  background-color: #08182f;
+  color: white;
+  border-radius: 50px;
+}
+
+.content-container
+  .page-content
+  .record-container
+  .table-pagination
+  .pagination
+  a:hover:not(.active) {
+  background-color: rgba(51, 51, 51, 0.2);
+  border-radius: 50px;
+}
+
 /*=============== 
       MEDIA
 =================*/
 
 @media (max-width: 1000px) {
-  .content-container .page-content .dashboard-grid {
+  .content-container .page-content .dashboard-container {
     max-width: 1246px;
     grid-template-columns: 1fr;
     grid-template-rows: 344px 418px 383px 383px;
@@ -834,9 +1011,19 @@ table tr:last-child td:last-child {
   }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 850px) {
   .header-container .page-header .nav-container .links li a {
     padding: 5px 10px;
+  }
+
+  .page-info,
+  .search-and-filters {
+    display: block;
+  }
+
+  .page-info .add-record-btn,
+  .search-and-filters .btn-group {
+    margin-top: 15px;
   }
 }
 
@@ -919,13 +1106,13 @@ table tr:last-child td:last-child {
     padding: 0;
   }
 
-  .content-container .page-content .dashboard-grid {
+  .content-container .page-content .dashboard-container {
     display: block;
   }
 
-  .content-container .page-content .dashboard-grid .latest-records-grid,
-  .content-container .page-content .dashboard-grid .activities-grid,
-  .content-container .page-content .dashboard-grid .map-overview-grid {
+  .content-container .page-content .dashboard-container .latest-records-grid,
+  .content-container .page-content .dashboard-container .activities-grid,
+  .content-container .page-content .dashboard-container .map-overview-grid {
     margin-top: 15px;
   }
 }
