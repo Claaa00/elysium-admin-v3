@@ -28,3 +28,8 @@ const closeAddOverlay = document.getElementById("closeOverlayBtn");
 closeAddOverlay.addEventListener("click", function off() {
   document.getElementById("addRecordOverlay").style.display = "none";
 });
+
+const closeAddOverlay2 = document.getElementById("closeOverlayBtn2");
+closeAddOverlay2.addEventListener("click", function off() {
+  document.getElementById("addRecordOverlay").style.display = "none";
+});

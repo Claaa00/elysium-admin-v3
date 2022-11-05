@@ -39,7 +39,6 @@ td,
 }
 
 p {
-  /* opacity: 0.8; */
   color: rgba(51, 51, 51, 0.75);
 }
 
@@ -108,7 +107,6 @@ li {
 table {
   border-collapse: separate;
   border-spacing: 0;
-  /* min-width: 350px; */
   width: 100%;
   table-layout: auto;
 }
@@ -182,7 +180,6 @@ table tr:last-child td:last-child {
   height: 50px;
   background-color: #08182f;
   color: white;
-  /* display: none; */
   z-index: 2;
 }
 
@@ -292,7 +289,6 @@ table tr:last-child td:last-child {
 .header-container .page-header .other-container .search-focus:hover input {
   width: 200px;
   background: rgba(250, 250, 250, 0.2);
-  /* border-radius: 5px; */
   height: 30px;
   border: 1px solid white;
   outline: none;
@@ -367,12 +363,9 @@ table tr:last-child td:last-child {
   top: 110%;
   right: 0%;
   width: 300px;
-  /* height: fit-content; */
   max-height: 0px;
   line-height: 40px;
-  /* border-radius: 5px; */
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-  /* display: none; */
   opacity: 0;
   visibility: hidden;
   z-index: 1;
@@ -389,7 +382,6 @@ table tr:last-child td:last-child {
   .other-container
   .profile-dropdown:focus
   .profile-sub-menu {
-  /* display: block; */
   max-height: fit-content;
   visibility: visible;
   opacity: 1;
@@ -529,13 +521,11 @@ table tr:last-child td:last-child {
 
 .content-container {
   position: relative;
-  /* left: 30px; */
   z-index: 1;
 }
 
 .content-container .page-content {
   padding: 20px 30px 20px 30px;
-  /* height: 100vh; */
 }
 
 .content-container .page-content .page-info {
@@ -569,7 +559,6 @@ table tr:last-child td:last-child {
 
 .content-container .page-content .dashboard-container .statistics-grid {
   width: 100%;
-  /* max-height: 445px; */
 }
 
 .content-container
@@ -637,8 +626,6 @@ table tr:last-child td:last-child {
   padding: 8px;
   width: 30px;
   height: 30px;
-  /* align-items: center;
-  justify-content: center; */
   position: relative;
   float: right;
   margin: 0;
@@ -679,19 +666,6 @@ table tr:last-child td:last-child {
   .table-container {
   max-height: 326px;
 }
-
-/* .content-container
-  .page-content
-  .dashboard-container
-  .latest-records-grid
-  .table-container,
-.content-container
-  .page-content
-  .dashboard-container
-  .latest-records-grid
-  .table {
-  width: 100%;
-} */
 
 /*=====================================
       CONTENT-dashboard-activities
@@ -801,7 +775,6 @@ table tr:last-child td:last-child {
   .map-overview {
   text-align: center;
   position: relative;
-  /* background-image: url(/assets/images/png-clipart-printer-friendly-cemetery-history-computer-program-printing-bonaventure-cemetery-map-printerfriendly-cemetery.png); */
 }
 
 .content-container
@@ -811,7 +784,6 @@ table tr:last-child td:last-child {
   .map-overview
   .map-container
   img {
-  /* width: 100%; */
   width: 100%;
   height: 283px;
   object-fit: cover;
@@ -925,11 +897,6 @@ table tr:last-child td:last-child {
   max-height: 500px;
 }
 
-/* .content-container .page-content .record-container .table-container,
-.content-container .page-content .record-container .table {
-  width: 100%;
-} */
-
 .content-container
   .page-content
   .record-container
@@ -970,8 +937,6 @@ table tr:last-child td:last-child {
 .content-container .page-content .record-container .table-pagination {
   width: 100%;
   margin-top: 15px;
-  /* justify-content: center;
-  align-items: center; */
   text-align: center;
 }
 
@@ -1023,11 +988,12 @@ table tr:last-child td:last-child {
 }
 
 /*============================================
-      CONTENT-records-add-btn-overlay
+      CONTENT-records-overlay-container
 ============================================*/
 
+/* black transparent background */
+
 .overlay-container {
-  /* height: 300px; */
   position: fixed;
   display: none;
   width: 100%;
@@ -1041,28 +1007,32 @@ table tr:last-child td:last-child {
   cursor: pointer;
 }
 
+/* overlayed div/s */
+
 .overlay-container .overlay {
   max-width: 800px;
+  width: 100%;
   height: 550px;
   background-color: white;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  /* vertical-align: middle; */
 }
 
 .overlay-container .overlay .left-container {
   background-color: #08182f;
   color: white;
-  width: 300px;
+  max-width: 300px;
+  width: 100%;
   position: relative;
 }
 
 .overlay-container .overlay .right-container {
   background-color: white;
   color: #333;
-  width: 500px;
+  max-width: 500px;
+  width: 100%;
 }
 
 .overlay-container .overlay .left-container,
@@ -1071,25 +1041,47 @@ table tr:last-child td:last-child {
   padding: 60px 30px 30px 30px;
 }
 
+/*===========================================
+      CONTENT-records-overlay-buttons
+===========================================*/
+.overlay-container .overlay .left-container .overlay-btns,
+.overlay-container .overlay .overlayed-btns {
+  text-align: center;
+  width: 100%;
+}
+
 .overlay-container .overlay .left-container .overlay-btns {
   position: absolute;
   bottom: 30px;
-  left: 0;
-  /* width: 240px; */
-  /* align-items: center; */
-  text-align: center;
-  /* width: 240px; */
+  max-width: 100%;
+  width: 240px;
 }
 
-.overlay-container .overlay .left-container .overlay-btns .overlay-btn {
+.overlay-container .overlay .overlayed-btns {
+  width: 100%;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: #08182f;
+  padding: 30px;
+}
+
+.overlay-container .overlay .left-container .overlay-btns .overlay-btn,
+.overlay-container .overlay .overlayed-btns .overlay-btn {
   text-align: center;
   padding-block: 8px;
-  /* width: 100%; */
-  width: 240px;
-  /* width: 100%; */
-  margin-bottom: 15px;
   font-size: 17px;
   font-weight: 400;
+  height: fit-content;
+  min-width: 100px;
+  width: 100%;
+}
+.overlay-container .overlay .left-container .overlay-btns .overlay-btn {
+  margin-bottom: 15px;
+}
+
+.overlay-container .overlay .overlayed-btns .overlay-btn {
+  margin-right: 15px;
 }
 
 .overlay-container
@@ -1100,63 +1092,56 @@ table tr:last-child td:last-child {
   margin-bottom: 0;
 }
 
-.overlay-container .overlay .left-container .overlay-btns .border-btn {
+.overlay-container .overlay .overlayed-btns .overlay-btn:last-child {
+  margin-right: 0;
+}
+
+.overlay-container .overlay .left-container .overlay-btns .border-btn,
+.overlay-container .overlay .overlayed-btns .border-btn {
   background-color: #08182f;
   outline: none;
   border: 1px solid white;
   color: white;
 }
 
-.overlay-container .overlay .left-container .overlay-btns .border-btn:hover {
-  background-color: rgba(250, 250, 250, 0.5);
-  outline: none;
-  /* border: 1px solid white; */
-  /* border: none; */
-  color: #08182f;
-}
-
-.overlay-container .overlay .left-container .overlay-btns .clrd-btn {
+.overlay-container .overlay .left-container .overlay-btns .clrd-btn,
+.overlay-container .overlay .overlayed-btns .clrd-btn {
   background-color: white;
   outline: none;
   border: 1px solid white;
-  /* border: none; */
   color: #333;
 }
 
-.overlay-container .overlay .left-container .overlay-btns .clrd-btn:hover {
+.overlay-container .overlay .left-container .overlay-btns .border-btn:hover,
+.overlay-container .overlay .overlayed-btns .border-btn:hover,
+.overlay-container .overlay .left-container .overlay-btns .clrd-btn:hover,
+.overlay-container .overlay .overlayed-btns .clrd-btn:hover {
   background-color: rgba(250, 250, 250, 0.5);
   outline: none;
-  /* border: 1px solid white; */
   color: #08182f;
 }
 
-.overlay-container .overlay .right-container form .name-fieldset {
-  display: grid;
-  grid-template-areas: "gridArea gridArea";
-  grid-gap: 15px;
-  /* background-color: #2196F3; */
-  /* padding: 10px; */
+/*===========================================================
+      CONTENT-records-overlay-container-right-container
+===========================================================*/
+
+.overlay-container .overlay .right-container form {
+  width: 100%;
 }
 
-.overlay-container .overlay .right-container form .date-fieldset {
-  display: grid;
-  grid-template-areas: "gridArea gridArea";
-  grid-gap: 15px;
-  /* background-color: #2196F3; */
-  /* padding: 10px; */
-}
-
+.overlay-container .overlay .right-container form .name-fieldset,
+.overlay-container .overlay .right-container form .date-fieldset,
 .overlay-container .overlay .right-container form .location-fieldset {
   display: grid;
   grid-template-areas: "gridArea gridArea";
   grid-gap: 15px;
-  /* background-color: #2196F3; */
-  /* padding: 10px; */
 }
 
 .overlay-container .overlay .right-container form fieldset {
   margin-bottom: 30px;
   width: 100%;
+  outline: none;
+  border: none;
 }
 
 .overlay-container .overlay .right-container form fieldset:last-child {
@@ -1223,6 +1208,34 @@ table tr:last-child td:last-child {
   .page-info .add-record-btn,
   .search-and-filters .btn-group {
     margin-top: 15px;
+  }
+
+  .overlay-container .overlay {
+    display: block;
+    overflow: auto;
+  }
+
+  .overlay-container .overlay .left-container,
+  .overlay-container .overlay .right-container {
+    max-width: 800px;
+    width: 100%;
+    height: fit-content;
+    padding: 30px;
+  }
+
+  .overlay-container .overlay .left-container {
+    position: sticky;
+    top: 0;
+  }
+
+  .overlay-container .overlay .left-container .overlay-btns {
+    display: none;
+  }
+
+  .overlay-container .overlay .overlayed-btns {
+    display: flex;
+    /* position: sticky;
+    bottom: 0; */
   }
 }
 
