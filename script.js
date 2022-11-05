@@ -18,3 +18,13 @@ const closeBtn = document.getElementById("closeBtn");
 closeBtn.addEventListener("click", function () {
   document.getElementById("navs").style.left = "-100%";
 });
+
+const openAddOverlay = document.getElementById("addRecordBtn");
+openAddOverlay.addEventListener("click", function on() {
+  document.getElementById("addRecordOverlay").style.display = "block";
+});
+
+const closeAddOverlay = document.getElementById("closeOverlayBtn");
+closeAddOverlay.addEventListener("click", function off() {
+  document.getElementById("addRecordOverlay").style.display = "none";
+});

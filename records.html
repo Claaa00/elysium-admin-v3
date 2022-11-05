@@ -188,7 +188,7 @@
             </p>
           </div>
 
-          <button class="btn add-record-btn round-corner">
+          <button class="btn add-record-btn round-corner" id="addRecordBtn">
             <i class="fa-solid fa-plus"></i>
             New Record
           </button>
@@ -498,7 +498,7 @@
           </div>
 
           <div class="table-pagination">
-            <div class="pagination">
+            <div class="pagination clearfix">
               <a href="#"><i class="fa-solid fa-angles-left"></i></a>
               <a href="#" class="active">1</a>
               <a href="#">2</a>
@@ -513,21 +513,103 @@
       </div>
     </div>
 
-    <div class="add-btn-overlay">
-      <div class="overlay-container add-btn">
+    <div class="overlay-container" id="addRecordOverlay">
+      <div class="overlay add-btn flex-items">
         <div class="left-container">
           <h1 class="overlay-title">New Record</h1>
           <div class="overlay-btns">
-            <button class="overlay-btn border-btn">Cancel</button>
-            <button class="overlay-btn clrd-btn">Save</button>
+            <button
+              class="overlay-btn border-btn round-corner"
+              id="closeOverlayBtn"
+            >
+              Cancel
+            </button>
+            <button class="overlay-btn clrd-btn round-corner">Save</button>
           </div>
         </div>
 
         <div class="right-container">
           <form>
-            <div class="row">
-              <label for=""></label>
-            </div>
+            <fieldset class="name-fieldset">
+              <legend>Name</legend>
+
+              <label for="fname">First Name</label>
+              <input
+                type="text"
+                id="fname"
+                name="fname"
+                placeholder="First name"
+              />
+
+              <label for="lname">Last Name</label>
+              <input
+                type="text"
+                id="lname"
+                name="lname"
+                placeholder="Last name"
+              />
+            </fieldset>
+
+            <fieldset class="date-fieldset">
+              <legend>Date</legend>
+
+              <label for="dOB" class="date">Date of Birth</label>
+              <label for="dOD" class="date">Date of Death</label>
+
+              <input type="date" id="dOB" name="dOB" />
+              <input type="date" id="dOD" name="dOD" />
+            </fieldset>
+
+            <fieldset class="location-fieldset">
+              <legend>Location</legend>
+
+              <label for="block">Block</label>
+
+              <input list="blocks" name="block" placeholder="Block" />
+              <datalist id="blocks">
+                <option value="Block 1"></option>
+                <option value="Block 2"></option>
+                <option value="Block 3"></option>
+                <option value="Block 4"></option>
+                <option value="Block 5"></option>
+              </datalist>
+
+              <label for="gtype">Grave Type</label>
+              <input list="gtypes" name="gtype" placeholder="Grave Type" />
+              <datalist id="gtypes">
+                <option value="Apartment"></option>
+                <option value="Lawn"></option>
+                <option value="Mausoleum"></option>
+              </datalist>
+
+              <label for="column">Column</label>
+              <input list="columns" name="column" placeholder="Column" />
+              <datalist id="columns">
+                <option value="Column 1"></option>
+                <option value="Column 2"></option>
+                <option value="Column 3"></option>
+                <option value="Column 4"></option>
+                <option value="Column 5"></option>
+              </datalist>
+
+              <label for="row">Row</label>
+              <input list="rows" name="row" placeholder="Row" />
+              <datalist id="rows">
+                <option value="Row 1"></option>
+                <option value="Row 2"></option>
+                <option value="Row 3"></option>
+                <option value="Row 4"></option>
+                <option value="Row 5"></option>
+              </datalist>
+
+              <label for="coordinate">Coordinate</label>
+              <input
+                type="text"
+                id="coordinate"
+                name="coordinate"
+                placeholder="Coordinate"
+              />
+            </fieldset>
           </form>
         </div>
       </div>
