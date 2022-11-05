@@ -33,3 +33,13 @@ const closeAddOverlay2 = document.getElementById("closeOverlayBtn2");
 closeAddOverlay2.addEventListener("click", function off() {
   document.getElementById("addRecordOverlay").style.display = "none";
 });
+
+const openFilterBtn = document.getElementById("openFilterBtn");
+openFilterBtn.addEventListener("click", function on() {
+  document.getElementById("filterOverlay").style.display = "block";
+});
+
+const closeFilterBtn = document.getElementById("closeFilterBtn");
+closeFilterBtn.addEventListener("click", function off() {
+  document.getElementById("filterOverlay").style.display = "none";
+});

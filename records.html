@@ -159,7 +159,7 @@
               <img src="assets/images/OpenPeeps-AvatarandBackdrop.png" />
             </button>
 
-            <div class="profile-sub-menu dropdown round-corner">
+            <div class="profile-sub-menu round-corner">
               <div class="profile-details">
                 <img src="assets/images/OpenPeeps-AvatarandBackdrop.png" />
                 <div class="user-details">
@@ -213,10 +213,103 @@
               Download Report
             </button>
 
-            <button type="button" class="btn round-corner saf-btn">
-              <i class="fa-solid fa-filter"></i>
-              Filter
-            </button>
+            <div class="filter-btn-container">
+              <button
+                type="button"
+                class="btn round-corner saf-btn"
+                id="openFilterBtn"
+              >
+                <i class="fa-solid fa-filter"></i>
+                Filter
+              </button>
+              <div
+                class="filter-sub-menu round-corner saf-overlay"
+                id="filterOverlay"
+              >
+                <div class="sub-menu-title">
+                  <strong>Filter</strong>
+                </div>
+
+                <div class="sub-menu-options">
+                  <form>
+                    <fieldset class="block-fieldset">
+                      <legend>Block</legend>
+
+                      <label for="filter-block">Block</label>
+                      <input
+                        list="blocks"
+                        name="filter-block"
+                        placeholder="Block"
+                      />
+                      <datalist id="blocks">
+                        <option value="Block 1"></option>
+                        <option value="Block 2"></option>
+                        <option value="Block 3"></option>
+                        <option value="Block 4"></option>
+                        <option value="Block 5"></option>
+                      </datalist>
+                    </fieldset>
+
+                    <fieldset class="grave-type-fieldset flex-items">
+                      <legend>Grave Type</legend>
+
+                      <div class="grave-type-filter flex-items">
+                        <label for="grave-type-1"> Apartment</label>
+                        <input
+                          type="checkbox"
+                          id="graveType1"
+                          name="grave-type-1"
+                          value="Apartment"
+                          class="display-block"
+                        />
+                      </div>
+
+                      <div class="grave-type-filter flex-items">
+                        <label for="grave-type-2"> Lawn</label>
+                        <input
+                          type="checkbox"
+                          id="graveType2"
+                          name="grave-type-2"
+                          value="Lawn"
+                          class="display-block"
+                        />
+                      </div>
+
+                      <div class="grave-type-filter flex-items">
+                        <label for="grave-type-3"> Mausoleum</label>
+                        <input
+                          type="checkbox"
+                          id="graveType3"
+                          name="grave-type-3"
+                          value="Mausoleum"
+                          class="display-block"
+                        />
+                      </div>
+                    </fieldset>
+
+                    <fieldset class="date2-fieldset">
+                      <legend id="date2">Date</legend>
+
+                      <label for="dOB2">Birth</label>
+                      <label for="dOD2">Death</label>
+
+                      <input type="month" id="dOB2" name="dOB2" />
+                      <input type="month" id="dOD2" name="dOD2" />
+                    </fieldset>
+                  </form>
+                </div>
+                <div class="sub-menu-btns">
+                  <div
+                    class="sub-menu-btn border-btn round-corner"
+                    id="closeFilterBtn"
+                  >
+                    Cancel
+                  </div>
+
+                  <div class="sub-menu-btn clrd-btn round-corner">Save</div>
+                </div>
+              </div>
+            </div>
 
             <button type="button" class="btn round-corner saf-btn">
               <i class="fa-solid fa-arrow-down-wide-short"></i>

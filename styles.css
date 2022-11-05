@@ -168,6 +168,63 @@ table tr:last-child td:last-child {
   outline: none;
 }
 
+fieldset {
+  margin-bottom: 30px;
+  width: 100%;
+  outline: none;
+  border: none;
+}
+
+fieldset:last-child {
+  margin-bottom: 0;
+}
+
+legend {
+  font-size: 17px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+form label {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+input {
+  font-size: 14px;
+  font-weight: 400;
+  padding: 5px;
+  border-radius: 5px;
+  outline: none;
+  border: 1px solid rgba(51, 51, 51, 0.5);
+}
+
+input:hover,
+input:focus {
+  border-color: #08182f;
+}
+
+.border-btn {
+  background-color: #08182f;
+  outline: none;
+  border: 1px solid white;
+  color: white;
+}
+
+.clrd-btn {
+  background-color: white;
+  outline: none;
+  border: 1px solid white;
+  color: #333;
+}
+
+.border-btn:hover,
+.clrd-btn:hover {
+  background-color: rgba(250, 250, 250, 0.5);
+  outline: none;
+  color: #08182f;
+}
+
 /*=============== 
       HEADER
 =================*/
@@ -278,12 +335,10 @@ table tr:last-child td:last-child {
   width: 35px;
   height: 30px;
   background: none;
-  font-size: 14px;
   color: white;
   border: none;
   transition: 0.5s;
   letter-spacing: 1px;
-  font-weight: 400;
 }
 
 .header-container .page-header .other-container .search-focus:hover input {
@@ -830,6 +885,8 @@ table tr:last-child td:last-child {
 
 .content-container .page-content .search-and-filters {
   margin-top: 30px;
+  /* position: relative;
+  z-index: 20; */
 }
 
 .content-container .page-content .search-and-filters .search input {
@@ -865,11 +922,24 @@ table tr:last-child td:last-child {
   border-color: rgba(51, 51, 51, 0.5);
 }
 
+.content-container .page-content .search-and-filters .btn-group {
+  display: flex;
+}
+
 .content-container .page-content .search-and-filters .btn-group .saf-btn {
   border-color: rgba(51, 51, 51, 0.5);
   color: #333;
   background: none;
   transition: all 0.2s ease;
+  margin-right: 10px;
+}
+
+.content-container
+  .page-content
+  .search-and-filters
+  .btn-group
+  .saf-btn:last-child {
+  margin-right: 0;
 }
 
 .content-container .page-content .search-and-filters .btn-group .saf-btn:hover {
@@ -878,8 +948,215 @@ table tr:last-child td:last-child {
   border-color: #08182f;
 }
 
-.content-container .page-content .search-and-filters .btn-group .saf-btn i {
+.content-container .page-content .search-and-filters .btn-group .saf-btn i,
+.content-container .page-content .search-and-filters .search input {
   margin-right: 5px;
+}
+
+/*====================================================
+      CONTENT-records-search-and-filters-overlay
+====================================================*/
+
+.content-container
+  .page-content
+  .search-and-filters
+  .btn-group
+  .filter-btn-container {
+  /* position: relative; */
+  /* display: none; */
+  display: block;
+  position: relative;
+}
+
+.content-container
+  .page-content
+  .search-and-filters
+  .btn-group
+  .filter-btn-container
+  .saf-overlay {
+  position: absolute;
+  top: 130%;
+  right: 10px;
+  background-color: salmon;
+  width: 350px;
+  /* width: 100%; */
+  display: block;
+  z-index: 200;
+}
+
+.content-container
+  .page-content
+  .search-and-filters
+  .btn-group
+  .filter-btn-container
+  .filter-sub-menu {
+  display: none;
+}
+
+.content-container
+  .page-content
+  .search-and-filters
+  .btn-group
+  .filter-btn-container
+  .saf-overlay
+  .sub-menu-title,
+.content-container
+  .page-content
+  .search-and-filters
+  .btn-group
+  .filter-btn-container
+  .saf-overlay
+  .sub-menu-btns {
+  background-color: #08182f;
+  padding: 15px;
+  color: white;
+  border: none;
+}
+
+.content-container
+  .page-content
+  .search-and-filters
+  .btn-group
+  .filter-btn-container
+  .saf-overlay
+  .sub-menu-title {
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.content-container
+  .page-content
+  .search-and-filters
+  .btn-group
+  .filter-btn-container
+  .saf-overlay
+  .sub-menu-options {
+  background-color: white;
+  color: #333;
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #08182f;
+}
+
+.content-container
+  .page-content
+  .search-and-filters
+  .btn-group
+  .filter-btn-container
+  .saf-overlay
+  .sub-menu-options
+  form
+  .block-fieldset
+  label {
+  display: none;
+}
+
+.content-container
+  .page-content
+  .search-and-filters
+  .btn-group
+  .filter-btn-container
+  .saf-overlay
+  .sub-menu-options
+  form
+  .block-fieldset
+  input {
+  width: 100%;
+}
+
+.content-container
+  .page-content
+  .search-and-filters
+  .btn-group
+  .filter-btn-container
+  .saf-overlay
+  .sub-menu-options
+  form
+  .grave-type-fieldset {
+  display: block;
+}
+
+.content-container
+  .page-content
+  .search-and-filters
+  .btn-group
+  .filter-btn-container
+  .saf-overlay
+  .sub-menu-options
+  form
+  .grave-type-fieldset
+  .grave-type-filter {
+  padding: 10px 15px;
+  /* margin-bottom: 5px; */
+}
+
+.content-container
+  .page-content
+  .search-and-filters
+  .btn-group
+  .filter-btn-container
+  .saf-overlay
+  .sub-menu-options
+  form
+  .date2-fieldset {
+  display: grid;
+  grid-template-areas: "gridArea2 gridArea2";
+  grid-gap: 15px;
+}
+
+.content-container
+  .page-content
+  .search-and-filters
+  .btn-group
+  .filter-btn-container
+  .saf-overlay
+  .sub-menu-options
+  form
+  .date2-fieldset
+  input[id="date2"] {
+  grid-area: gridArea2;
+}
+
+.content-container
+  .page-content
+  .search-and-filters
+  .btn-group
+  .filter-btn-container
+  .saf-overlay
+  .sub-menu-btns {
+  display: flex;
+  width: 100%;
+  align-items: flex-end;
+  justify-content: right;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.content-container
+  .page-content
+  .search-and-filters
+  .btn-group
+  .filter-btn-container
+  .saf-overlay
+  .sub-menu-btns
+  .sub-menu-btn {
+  width: 90px;
+  text-align: center;
+  padding: 5px 15px;
+  margin-right: 10px;
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.content-container
+  .page-content
+  .search-and-filters
+  .btn-group
+  .filter-btn-container
+  .saf-overlay
+  .sub-menu-btns
+  .sub-menu-btn:last-child {
+  margin-right: 0;
 }
 
 /*============================================
@@ -891,6 +1168,8 @@ table tr:last-child td:last-child {
   color: #333;
   margin-top: 15px;
   max-height: 785px;
+  position: relative;
+  z-index: 15;
 }
 
 .content-container .page-content .record-container .table-container {
@@ -1041,9 +1320,9 @@ table tr:last-child td:last-child {
   padding: 60px 30px 30px 30px;
 }
 
-/*===========================================
-      CONTENT-records-overlay-buttons
-===========================================*/
+/*=================================================
+      CONTENT-records-overlay-container-overlay-buttons
+=================================================*/
 .overlay-container .overlay .left-container .overlay-btns,
 .overlay-container .overlay .overlayed-btns {
   text-align: center;
@@ -1096,31 +1375,6 @@ table tr:last-child td:last-child {
   margin-right: 0;
 }
 
-.overlay-container .overlay .left-container .overlay-btns .border-btn,
-.overlay-container .overlay .overlayed-btns .border-btn {
-  background-color: #08182f;
-  outline: none;
-  border: 1px solid white;
-  color: white;
-}
-
-.overlay-container .overlay .left-container .overlay-btns .clrd-btn,
-.overlay-container .overlay .overlayed-btns .clrd-btn {
-  background-color: white;
-  outline: none;
-  border: 1px solid white;
-  color: #333;
-}
-
-.overlay-container .overlay .left-container .overlay-btns .border-btn:hover,
-.overlay-container .overlay .overlayed-btns .border-btn:hover,
-.overlay-container .overlay .left-container .overlay-btns .clrd-btn:hover,
-.overlay-container .overlay .overlayed-btns .clrd-btn:hover {
-  background-color: rgba(250, 250, 250, 0.5);
-  outline: none;
-  color: #08182f;
-}
-
 /*===========================================================
       CONTENT-records-overlay-container-right-container
 ===========================================================*/
@@ -1137,23 +1391,6 @@ table tr:last-child td:last-child {
   grid-gap: 15px;
 }
 
-.overlay-container .overlay .right-container form fieldset {
-  margin-bottom: 30px;
-  width: 100%;
-  outline: none;
-  border: none;
-}
-
-.overlay-container .overlay .right-container form fieldset:last-child {
-  margin-bottom: 0;
-}
-
-.overlay-container .overlay .right-container form fieldset legend {
-  font-size: 17px;
-  font-weight: 500;
-  margin-bottom: 15px;
-}
-
 .overlay-container .overlay .right-container form fieldset legend,
 .overlay-container
   .overlay
@@ -1168,18 +1405,16 @@ table tr:last-child td:last-child {
   display: none;
 }
 
-.overlay-container .overlay .right-container form fieldset label {
-  font-size: 14px;
-  font-weight: 500;
-}
-
 .overlay-container .overlay .right-container form fieldset input {
   padding: 10px;
-  font-size: 14px;
-  font-weight: 400;
-  outline: #08182f;
+  /* outline: #08182f; */
   border: 1px solid rgba(51, 51, 51, 0.5);
   border-radius: 5px;
+}
+
+.overlay-container .overlay .right-container form fieldset input:hover,
+.overlay-container .overlay .right-container form fieldset input:focus {
+  border-color: #08182f;
 }
 
 /*=============== 
