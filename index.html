@@ -109,7 +109,7 @@
   <body>
     <header class="header-container">
       <div class="page-header fixed-width flex-items">
-        <i class="fa-solid fa-bars menu-bar" id="menuBar"></i>
+        <i class="fa-solid fa-bars menu-bar" id="openMenuBar"></i>
 
         <a href="index.html" class="logo-container flex-items">
           <img src="/assets/images/e-removebg-preview.png" />
@@ -123,7 +123,7 @@
               <h1 class="logo-name">lysium</h1>
             </a>
 
-            <i class="fa-solid fa-xmark close-btn" id="closeBtn"></i>
+            <i class="fa-solid fa-xmark close-btn" id="closeMenuBar"></i>
           </aside>
 
           <ul class="links">
@@ -149,10 +149,8 @@
             <i class="fa-solid fa-magnifying-glass"></i>
           </div>
 
-          <button class="add-button">
-            <a href="#">
-              <i class="fa-solid fa-plus"></i>
-            </a>
+          <button class="add-button" onclick="openAddOverlayHeader()">
+            <i class="fa-solid fa-plus"></i>
           </button>
 
           <div class="profile-dropdown">
@@ -452,6 +450,121 @@
       </div>
     </div>
 
-    <script src="script.js"></script>
+    <div
+      class="overlay-container dashboard-add-overlay"
+      style="display: none"
+      id="addRecordOverlay"
+    >
+      <div class="overlay flex-items">
+        <div class="left-container">
+          <h1 class="overlay-title">New Record</h1>
+          <div class="overlay-btns">
+            <button
+              class="overlay-btn border-btn round-corner"
+              onclick="closeAddOverlay()"
+            >
+              Cancel
+            </button>
+            <button class="overlay-btn clrd-btn round-corner">Save</button>
+          </div>
+        </div>
+
+        <div class="right-container">
+          <form>
+            <fieldset class="name-fieldset">
+              <legend>Name</legend>
+
+              <label for="fname">First Name</label>
+              <input
+                type="text"
+                id="fname"
+                name="fname"
+                placeholder="First name"
+              />
+
+              <label for="lname">Last Name</label>
+              <input
+                type="text"
+                id="lname"
+                name="lname"
+                placeholder="Last name"
+              />
+            </fieldset>
+
+            <fieldset class="date-fieldset">
+              <legend>Date</legend>
+
+              <label for="dOB" class="date">Date of Birth</label>
+              <label for="dOD" class="date">Date of Death</label>
+
+              <input type="date" id="dOB" name="dOB" />
+              <input type="date" id="dOD" name="dOD" />
+            </fieldset>
+
+            <fieldset class="location-fieldset">
+              <legend>Location</legend>
+
+              <label for="block">Block</label>
+
+              <input list="blocks" name="block" placeholder="Block" />
+              <datalist id="blocks">
+                <option value="Block 1"></option>
+                <option value="Block 2"></option>
+                <option value="Block 3"></option>
+                <option value="Block 4"></option>
+                <option value="Block 5"></option>
+              </datalist>
+
+              <label for="gtype">Grave Type</label>
+              <input list="gtypes" name="gtype" placeholder="Grave Type" />
+              <datalist id="gtypes">
+                <option value="Apartment"></option>
+                <option value="Lawn"></option>
+                <option value="Mausoleum"></option>
+              </datalist>
+
+              <label for="column">Column</label>
+              <input list="columns" name="column" placeholder="Column" />
+              <datalist id="columns">
+                <option value="Column 1"></option>
+                <option value="Column 2"></option>
+                <option value="Column 3"></option>
+                <option value="Column 4"></option>
+                <option value="Column 5"></option>
+              </datalist>
+
+              <label for="row">Row</label>
+              <input list="rows" name="row" placeholder="Row" />
+              <datalist id="rows">
+                <option value="Row 1"></option>
+                <option value="Row 2"></option>
+                <option value="Row 3"></option>
+                <option value="Row 4"></option>
+                <option value="Row 5"></option>
+              </datalist>
+              <label for="coordinate">Coordinate</label>
+              <input
+                type="text"
+                id="coordinate"
+                name="coordinate"
+                placeholder="Coordinate"
+              />
+            </fieldset>
+          </form>
+        </div>
+
+        <div class="overlayed-btns">
+          <button
+            class="overlay-btn border-btn round-corner"
+            onclick="closeAddOverlay2()"
+          >
+            Cancel
+          </button>
+          <button class="overlay-btn clrd-btn round-corner">Save</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
   </body>
 </html>
