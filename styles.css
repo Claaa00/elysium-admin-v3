@@ -1514,9 +1514,8 @@ input:focus {
 
 /* black transparent background */
 
-.records-add-overlay,
-.dashboard-add-overlay,
-.records-add-overlay {
+.overlay-container,
+.message-overlay-container {
   position: fixed;
   /* display: none; */
   width: 100%;
@@ -1530,19 +1529,14 @@ input:focus {
   cursor: pointer;
 }
 
-.records-add-overlay,
-.dashboard-add-overlay,
-.records-add-overlay {
-  /* display: none; */
-}
-
 /* overlayed div/s */
 
-.overlay-container .overlay {
+.overlay-container .overlay,
+.message-overlay-container .alert {
   max-width: 800px;
   width: 100%;
   height: 550px;
-  background-color: white;
+  /* background-color: white; */
   position: fixed;
   top: 50%;
   left: 50%;
@@ -1568,6 +1562,10 @@ input:focus {
 .overlay-container .overlay .right-container {
   height: 100%;
   padding: 60px 30px 30px 30px;
+}
+
+.overlay-container .overlay .left-container .overlay-title {
+  text-transform: uppercase;
 }
 
 /*=================================================
@@ -1596,7 +1594,8 @@ input:focus {
 }
 
 .overlay-container .overlay .left-container .overlay-btns .overlay-btn,
-.overlay-container .overlay .overlayed-btns .overlay-btn {
+.overlay-container .overlay .overlayed-btns .overlay-btn,
+.message-overlay-container .alert .button-container button {
   text-align: center;
   padding-block: 8px;
   font-size: 17px;
@@ -1609,7 +1608,8 @@ input:focus {
   margin-bottom: 15px;
 }
 
-.overlay-container .overlay .overlayed-btns .overlay-btn {
+.overlay-container .overlay .overlayed-btns .overlay-btn,
+.message-overlay-container .alert .button-container button {
   margin-right: 15px;
 }
 
@@ -1621,7 +1621,8 @@ input:focus {
   margin-bottom: 0;
 }
 
-.overlay-container .overlay .overlayed-btns .overlay-btn:last-child {
+.overlay-container .overlay .overlayed-btns .overlay-btn:last-child,
+.message-overlay-container .alert .button-container button:last-child {
   margin-right: 0;
 }
 
@@ -1665,6 +1666,136 @@ input:focus {
 .overlay-container .overlay .right-container form fieldset input:hover,
 .overlay-container .overlay .right-container form fieldset input:focus {
   border-color: #08182f;
+}
+
+/*===========================================================
+      CONTENT-records-overlay-container-alert-container
+===========================================================*/
+
+/* .message-overlay-container {
+} */
+
+.message-overlay-container .alert {
+  background-color: #08182f;
+  padding: 30px;
+  display: block;
+  justify-content: center;
+  align-items: center;
+}
+
+/* .message-overlay-container .alert .alert-container {
+  text-align: center;
+} */
+
+.message-overlay-container .alert .alert-container i {
+  margin-right: 15px;
+}
+
+.successful-message-overlay-container .alert .alert-container i {
+  color: green;
+  font-size: 107px;
+}
+
+.error-message-overlay-container .alert .alert-container i,
+.trash-message-overlay-container .alert .alert-container i {
+  color: red;
+  font-size: 107px;
+}
+
+.message-overlay-container .alert .alert-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  max-height: 400px;
+  height: 100%;
+  /* text-align: center; */
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.message-overlay-container .alert .alert-container .alert-message {
+  color: white;
+  display: block;
+  text-align: left;
+}
+
+.message-overlay-container
+  .alert
+  .alert-container
+  .alert-message
+  .alert-description {
+  margin-top: 10px;
+  color: white;
+  max-width: 300px;
+  line-height: 17px;
+}
+
+.message-overlay-container .alert .button-container {
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  height: fit-content;
+  display: flex;
+  /* position: absolute;
+  bottom: 30px; */
+}
+
+.message-overlay-container .alert .button-container button {
+  /* display: block; */
+  /* max-width: 240px; */
+  width: 240px;
+  /* justify-items: center;
+  align-self: center; */
+}
+
+/*===========================================================
+      CONTENT-records-overlay-container-view-container
+===========================================================*/
+
+.view-record-overlay .overlay .right-container .record-container {
+  margin-top: 30px;
+  display: block;
+}
+
+.view-record-overlay .overlay .right-container .record-container .record-item {
+  display: flex;
+  text-align: left;
+  margin-bottom: 15px;
+}
+
+.view-record-overlay
+  .overlay
+  .right-container
+  .record-container
+  .record-item:last-child {
+  margin-bottom: 0;
+}
+
+.view-record-overlay
+  .overlay
+  .right-container
+  .record-container
+  .record-item
+  label {
+  width: 150px;
+  margin-right: 20px;
+}
+
+.view-record-overlay
+  .overlay
+  .right-container
+  .record-container
+  .record-item
+  p {
+  color: #333;
+  font-weight: 500;
+}
+
+.trash-message-overlay-container .alert .button-container .clrd-btn {
+  background-color: red;
+  border-color: red;
+  color: white;
 }
 
 /*=============== 

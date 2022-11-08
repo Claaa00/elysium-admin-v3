@@ -899,11 +899,7 @@
       </div>
     </div>
 
-    <div
-      class="overlay-container records-add-overlay"
-      style="display: none"
-      id="addRecordOverlay"
-    >
+    <div class="overlay-container" style="display: none" id="addRecordOverlay">
       <div class="overlay flex-items">
         <div class="left-container">
           <h1 class="overlay-title">New Record</h1>
@@ -1014,11 +1010,7 @@
       </div>
     </div>
 
-    <div
-      class="overlay-container records-add-overlay"
-      style="display: none"
-      id="editRecordOverlay"
-    >
+    <div class="overlay-container" style="display: none" id="editRecordOverlay">
       <div class="overlay flex-items">
         <div class="left-container">
           <h1 class="overlay-title">Edit Record</h1>
@@ -1134,111 +1126,35 @@
     </div>
 
     <div
-      class="overlay-container successful-message-overlay"
-      style="display: block"
+      class="message-overlay-container successful-message-overlay-container"
+      style="display: none"
       id="successfulMessageOverlay"
     >
-      <div class="overlay flex-items">
-        <div class="left-container">
-          <h1 class="overlay-title">Edit Record</h1>
-          <div class="overlay-btns">
-            <button
-              class="overlay-btn border-btn round-corner"
-              onclick="closeEditOverlay()"
-            >
-              Cancel
-            </button>
-            <button class="overlay-btn clrd-btn round-corner">
-              Save changes
-            </button>
+      <div class="alert">
+        <div class="alert-container">
+          <i class="fa-solid fa-circle-check"></i>
+          <div class="alert-message">
+            <h1 class="alert-title">Success!</h1>
+            <p class="alert-description">
+              The record has been created successfully!
+            </p>
           </div>
         </div>
 
-        <div class="right-container">
-          <form>
-            <fieldset class="name-fieldset">
-              <legend>Name</legend>
+        <div class="button-container">
+          <button class="overlay-btn clrd-btn round-corner">
+            Create New Record
+          </button>
 
-              <label for="fname">First Name</label>
-              <input
-                type="text"
-                id="fname"
-                name="fname"
-                placeholder="First name"
-              />
-
-              <label for="lname">Last Name</label>
-              <input
-                type="text"
-                id="lname"
-                name="lname"
-                placeholder="Last name"
-              />
-            </fieldset>
-
-            <fieldset class="date-fieldset">
-              <legend>Date</legend>
-
-              <label for="dOB" class="date">Date of Birth</label>
-              <label for="dOD" class="date">Date of Death</label>
-
-              <input type="date" id="dOB" name="dOB" />
-              <input type="date" id="dOD" name="dOD" />
-            </fieldset>
-
-            <fieldset class="location-fieldset">
-              <legend>Location</legend>
-
-              <label for="block">Block</label>
-
-              <input list="blocks" name="block" placeholder="Block" />
-              <datalist id="blocks">
-                <option value="Block 1"></option>
-                <option value="Block 2"></option>
-                <option value="Block 3"></option>
-                <option value="Block 4"></option>
-                <option value="Block 5"></option>
-              </datalist>
-
-              <label for="gtype">Grave Type</label>
-              <input list="gtypes" name="gtype" placeholder="Grave Type" />
-              <datalist id="gtypes">
-                <option value="Apartment"></option>
-                <option value="Lawn"></option>
-                <option value="Mausoleum"></option>
-              </datalist>
-
-              <label for="column">Column</label>
-              <input list="columns" name="column" placeholder="Column" />
-              <datalist id="columns">
-                <option value="Column 1"></option>
-                <option value="Column 2"></option>
-                <option value="Column 3"></option>
-                <option value="Column 4"></option>
-                <option value="Column 5"></option>
-              </datalist>
-
-              <label for="row">Row</label>
-              <input list="rows" name="row" placeholder="Row" />
-              <datalist id="rows">
-                <option value="Row 1"></option>
-                <option value="Row 2"></option>
-                <option value="Row 3"></option>
-                <option value="Row 4"></option>
-                <option value="Row 5"></option>
-              </datalist>
-              <label for="coordinate">Coordinate</label>
-              <input
-                type="text"
-                id="coordinate"
-                name="coordinate"
-                placeholder="Coordinate"
-              />
-            </fieldset>
-          </form>
+          <button
+            class="overlay-btn border-btn round-corner"
+            onclick="closeEditOverlay()"
+          >
+            Close
+          </button>
         </div>
 
-        <div class="overlayed-btns">
+        <!-- <div class="overlayed-btns">
           <button
             class="overlay-btn border-btn round-corner"
             onclick="closeEditOverlay2()"
@@ -1248,7 +1164,155 @@
           <button class="overlay-btn clrd-btn round-corner">
             Save changes
           </button>
+        </div> -->
+      </div>
+    </div>
+
+    <div
+      class="message-overlay-container error-message-overlay-container"
+      style="display: none"
+      id="errorMessageOverlay"
+    >
+      <div class="alert">
+        <div class="alert-container">
+          <i class="fa-solid fa-circle-exclamation"></i>
+          <div class="alert-message">
+            <h1 class="alert-title">Something went wrong</h1>
+            <p class="alert-description">
+              There was an issue trying to submit. Check your details and please
+              try again.
+            </p>
+          </div>
         </div>
+
+        <div class="button-container">
+          <button class="overlay-btn clrd-btn round-corner">Go back</button>
+
+          <button
+            class="overlay-btn border-btn round-corner"
+            onclick="closeEditOverlay()"
+          >
+            Close
+          </button>
+        </div>
+
+        <!-- <div class="overlayed-btns">
+          <button
+            class="overlay-btn border-btn round-corner"
+            onclick="closeEditOverlay2()"
+          >
+            Cancel
+          </button>
+          <button class="overlay-btn clrd-btn round-corner">
+            Save changes
+          </button>
+        </div> -->
+      </div>
+    </div>
+
+    <div
+      class="overlay-container view-record-overlay"
+      style="display: none"
+      id="viewRecordOverlay"
+    >
+      <div class="overlay flex-items">
+        <div class="left-container">
+          <h1 class="overlay-title">Details</h1>
+          <div class="overlay-btns">
+            <button
+              class="overlay-btn clrd-btn round-corner"
+              onclick="closeViewOverlay()"
+            >
+              Okay
+            </button>
+          </div>
+        </div>
+
+        <div class="right-container">
+          <h2 class="record-id">1234567890</h2>
+          <div class="record-container">
+            <div class="record-item">
+              <label>Name</label>
+              <p>Juan Lazy</p>
+            </div>
+
+            <div class="record-item">
+              <label>Location</label>
+              <p>41°24'12.2"N, 2°10'26.5"E</p>
+            </div>
+
+            <div class="record-item">
+              <label>Birth Date</label>
+              <p>11-01-1990</p>
+            </div>
+
+            <div class="record-item">
+              <label>Death Date</label>
+              <p>11-02-2020</p>
+            </div>
+
+            <div class="record-item">
+              <label>Date Created</label>
+              <p>11-07-2020</p>
+            </div>
+
+            <div class="record-item">
+              <label>Date Modified</label>
+              <p>07-21-2022</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="overlayed-btns">
+          <button
+            class="overlay-btn border-btn round-corner"
+            onclick="closeAddOverlay2()"
+          >
+            Cancel
+          </button>
+          <button class="overlay-btn clrd-btn round-corner">Save</button>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="message-overlay-container trash-message-overlay-container"
+      style="display: none"
+      id="trashMessageOverlay"
+    >
+      <div class="alert">
+        <div class="alert-container">
+          <i class="fa-solid fa-circle-exclamation"></i>
+          <div class="alert-message">
+            <h1 class="alert-title">Trash Record</h1>
+            <p class="alert-description">
+              Are you sure you want to trash this record?
+            </p>
+          </div>
+        </div>
+
+        <div class="button-container">
+          <button class="overlay-btn clrd-btn round-corner">Delete</button>
+
+          <button
+            class="overlay-btn border-btn round-corner"
+            onclick="closeEditOverlay()"
+          >
+            Cancel
+          </button>
+        </div>
+
+        <!-- <div class="overlayed-btns">
+        <button
+          class="overlay-btn border-btn round-corner"
+          onclick="closeEditOverlay2()"
+        >
+          Cancel
+        </button>
+        <button class="overlay-btn clrd-btn round-corner">
+          Save changes
+        </button>
+      </div> -->
       </div>
     </div>
 
