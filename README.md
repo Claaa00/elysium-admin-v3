@@ -32,11 +32,11 @@ This system is made with the aim to provide a *convenient* and *efficient* metho
 ### Settings
 
 1. General
-*   Edit Cemetery Name
-2. Account
-* Edit Profile Details
-* Edit Account Security Details
-3. About Us
+    * Edit Cemetery Name
+3. Account
+    * Edit Profile Details
+    * Edit Account Security Details
+4. About Us
 
 ---
 
