@@ -18,7 +18,7 @@ This system is made with the aim to provide a *convenient* and *efficient* metho
 3. Filter
 4. Sort
 5. Records/Results Table with pagination
-6. Download Report (or smth)
+6. Download Report (*or smth*)
 
 ### Maps
 
@@ -26,7 +26,7 @@ This system is made with the aim to provide a *convenient* and *efficient* metho
 2. Filter
 3. Sort
 4. Records/Results Cards
-5. Controls (for manipulation of map view)
+5. Controls (*for manipulation of map view*)
 6. Map
 
 ### Settings
