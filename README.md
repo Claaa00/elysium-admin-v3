@@ -40,7 +40,7 @@ This system is made with the aim to provide a *convenient* and *efficient* metho
 
 ---
 
-## TODO:
+## To Do
 
 ![Crying Cat](https://i.kym-cdn.com/entries/icons/mobile/000/026/489/crying.jpg)
 
@@ -58,7 +58,7 @@ This system is made with the aim to provide a *convenient* and *efficient* metho
 
 ---
 
-## Group members:
+## Group Members
 * Derpo 
 * Guillen
 * Navarro
