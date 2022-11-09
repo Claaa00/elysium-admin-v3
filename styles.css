@@ -907,7 +907,8 @@ input:focus {
   border-color: #08182f;
 }
 
-.content-container .page-content .search-and-filters .search .search-btn {
+.content-container .page-content .search-and-filters .search .search-btn,
+.map-container .page-content .search-container .search .search-btn {
   border-color: #08182f;
   color: white;
   background-color: #08182f;
@@ -916,39 +917,67 @@ input:focus {
 }
 
 .content-container .page-content .search-and-filters .search .search-btn:hover,
+.map-container .page-content .search-container .search .search-btn:hover,
 .content-container .page-content .page-info .add-record-btn:hover {
   background-color: white;
   color: #333;
   border-color: rgba(51, 51, 51, 0.5);
 }
 
-.content-container .page-content .search-and-filters .btn-group {
+.content-container .page-content .search-and-filters .btn-group,
+.map-container .page-content .search-container .btn-group {
   display: flex;
 }
 
-.content-container .page-content .search-and-filters .btn-group .saf-btn {
+.content-container .page-content .search-and-filters .btn-group .saf-btn,
+.map-container
+  .page-content
+  .search-container
+  .btn-group
+  .btn-container
+  .saf-btn {
   border-color: rgba(51, 51, 51, 0.5);
   color: #333;
   background: none;
   transition: all 0.2s ease;
   margin-right: 10px;
+  background-color: white;
 }
 
 .content-container
   .page-content
   .search-and-filters
   .btn-group
+  .saf-btn:last-child,
+.map-container
+  .page-content
+  .search-container
+  .btn-group
+  .btn-container
   .saf-btn:last-child {
   margin-right: 0;
 }
 
-.content-container .page-content .search-and-filters .btn-group .saf-btn:hover {
+.content-container .page-content .search-and-filters .btn-group .saf-btn:hover,
+.map-container
+  .page-content
+  .search-container
+  .btn-group
+  .btn-container
+  .saf-btn:hover {
   background-color: #08182f;
   color: white;
   border-color: #08182f;
 }
 
 .content-container .page-content .search-and-filters .btn-group .saf-btn i,
+.map-container
+  .page-content
+  .search-container
+  .btn-group
+  .btn-container
+  .saf-btn
+  i,
 .content-container .page-content .search-and-filters .search input {
   margin-right: 5px;
 }
@@ -966,7 +995,9 @@ input:focus {
   .page-content
   .search-and-filters
   .btn-group
-  .sort-btn-container {
+  .sort-btn-container,
+.map-container .page-content .search-container .btn-group .filter-btn-container,
+.map-container .page-content .search-container .btn-group .sort-btn-container {
   /* position: relative; */
   /* display: none; */
   display: block;
@@ -984,6 +1015,12 @@ input:focus {
   .search-and-filters
   .btn-group
   .sort-btn-container
+  .saf-overlay,
+.map-container
+  .page-content
+  .search-container
+  .btn-group
+  .btn-container
   .saf-overlay {
   position: absolute;
   top: 130%;
@@ -1037,6 +1074,34 @@ input:focus {
   .btn-group
   .sort-btn-container
   .saf-overlay
+  .sub-menu-btns,
+.map-container
+  .page-content
+  .search-container
+  .btn-group
+  .btn-container
+  .saf-overlay
+  .sub-menu-title,
+.map-container
+  .page-content
+  .search-container
+  .btn-group
+  .btn-container
+  .saf-overlay
+  .sub-menu-btns,
+.map-container
+  .page-content
+  .search-container
+  .btn-group
+  .btn-container
+  .saf-overlay
+  .sub-menu-title,
+.map-container
+  .page-content
+  .search-container
+  .btn-group
+  .btn-container
+  .saf-overlay
   .sub-menu-btns {
   background-color: #08182f;
   padding: 15px;
@@ -1057,6 +1122,20 @@ input:focus {
   .btn-group
   .sort-btn-container
   .saf-overlay
+  .sub-menu-title,
+.map-container
+  .page-content
+  .search-container
+  .btn-group
+  .btn-container
+  .saf-overlay
+  .sub-menu-title,
+.map-container
+  .page-content
+  .search-container
+  .btn-group
+  .btn-container
+  .saf-overlay
   .sub-menu-title {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
@@ -1074,6 +1153,20 @@ input:focus {
   .search-and-filters
   .btn-group
   .sort-btn-container
+  .saf-overlay
+  .sub-menu-options,
+.map-container
+  .page-content
+  .search-container
+  .btn-group
+  .btn-container
+  .saf-overlay
+  .sub-menu-options,
+.map-container
+  .page-content
+  .search-container
+  .btn-group
+  .btn-container
   .saf-overlay
   .sub-menu-options {
   background-color: white;
@@ -1102,6 +1195,26 @@ input:focus {
   .sub-menu-options
   form
   .order-fieldset
+  label,
+.map-container
+  .page-content
+  .search-container
+  .btn-group
+  .btn-container
+  .saf-overlay
+  .sub-menu-options
+  form
+  .block-fieldset
+  label,
+.map-container
+  .page-content
+  .search-container
+  .btn-group
+  .btn-container
+  .saf-overlay
+  .sub-menu-options
+  form
+  .order-fieldset
   label {
   display: none;
 }
@@ -1125,6 +1238,26 @@ input:focus {
   .sub-menu-options
   form
   .order-fieldset
+  input,
+.map-container
+  .page-content
+  .search-container
+  .btn-group
+  .btn-container
+  .saf-overlay
+  .sub-menu-options
+  form
+  .block-fieldset
+  input,
+.map-container
+  .page-content
+  .search-container
+  .btn-group
+  .btn-container
+  .saf-overlay
+  .sub-menu-options
+  form
+  .order-fieldset
   input {
   width: 100%;
 }
@@ -1143,6 +1276,24 @@ input:focus {
   .search-and-filters
   .btn-group
   .sort-btn-container
+  .saf-overlay
+  .sub-menu-options
+  form
+  .grave-info-fieldset,
+.map-container
+  .page-content
+  .search-container
+  .btn-group
+  .btn-container
+  .saf-overlay
+  .sub-menu-options
+  form
+  .grave-type-fieldset,
+.map-container
+  .page-content
+  .search-container
+  .btn-group
+  .btn-container
   .saf-overlay
   .sub-menu-options
   form
@@ -1169,6 +1320,26 @@ input:focus {
   .sub-menu-options
   form
   .grave-info-fieldset
+  .grave-info-sort,
+.map-container
+  .page-content
+  .search-container
+  .btn-group
+  .btn-container
+  .saf-overlay
+  .sub-menu-options
+  form
+  .grave-type-fieldset
+  .grave-type-filter,
+.map-container
+  .page-content
+  .search-container
+  .btn-group
+  .btn-container
+  .saf-overlay
+  .sub-menu-options
+  form
+  .grave-info-fieldset
   .grave-info-sort {
   padding: 10px 15px;
   /* margin-bottom: 5px; */
@@ -1179,6 +1350,15 @@ input:focus {
   .search-and-filters
   .btn-group
   .filter-btn-container
+  .saf-overlay
+  .sub-menu-options
+  form
+  .date2-fieldset,
+.map-container
+  .page-content
+  .search-container
+  .btn-group
+  .btn-container
   .saf-overlay
   .sub-menu-options
   form
@@ -1193,6 +1373,16 @@ input:focus {
   .search-and-filters
   .btn-group
   .filter-btn-container
+  .saf-overlay
+  .sub-menu-options
+  form
+  .date2-fieldset
+  input[id="date2"],
+.map-container
+  .page-content
+  .search-container
+  .btn-group
+  .btn-container
   .saf-overlay
   .sub-menu-options
   form
@@ -1213,6 +1403,20 @@ input:focus {
   .search-and-filters
   .btn-group
   .sort-btn-container
+  .saf-overlay
+  .sub-menu-btns,
+.map-container
+  .page-content
+  .search-container
+  .btn-group
+  .btn-container
+  .saf-overlay
+  .sub-menu-btns,
+.map-container
+  .page-content
+  .search-container
+  .btn-group
+  .btn-container
   .saf-overlay
   .sub-menu-btns {
   display: flex;
@@ -1238,6 +1442,22 @@ input:focus {
   .sort-btn-container
   .saf-overlay
   .sub-menu-btns
+  .sub-menu-btn,
+.map-container
+  .page-content
+  .search-container
+  .btn-group
+  .btn-container
+  .saf-overlay
+  .sub-menu-btns
+  .sub-menu-btn,
+.map-container
+  .page-content
+  .search-container
+  .btn-group
+  .btn-container
+  .saf-overlay
+  .sub-menu-btns
   .sub-menu-btn {
   width: 90px;
   text-align: center;
@@ -1260,6 +1480,22 @@ input:focus {
   .search-and-filters
   .btn-group
   .sort-btn-container
+  .saf-overlay
+  .sub-menu-btns
+  .sub-menu-btn:last-child,
+.map-container
+  .page-content
+  .search-container
+  .btn-group
+  .btn-container
+  .saf-overlay
+  .sub-menu-btns
+  .sub-menu-btn:last-child,
+.map-container
+  .page-content
+  .search-container
+  .btn-group
+  .btn-container
   .saf-overlay
   .sub-menu-btns
   .sub-menu-btn:last-child {
@@ -1796,6 +2032,159 @@ input:focus {
   background-color: red;
   border-color: red;
   color: white;
+}
+
+/*===========================================================
+      CONTENT-maps
+===========================================================*/
+
+.map-container .page-content {
+  max-width: 400px;
+  width: 100%;
+  margin: 20px 20px 20px 30px;
+}
+
+.map-container .page-content .search-and-controls,
+.map-container .page-content .search-container {
+  margin-top: 30px;
+  width: 100%;
+}
+
+.map-container .page-content .search-and-controls button {
+  padding-block: 8px;
+  font-size: 14px;
+  font-weight: 400;
+  background: none;
+  outline: none;
+  max-width: 152px;
+  width: 100%;
+  display: inline;
+  margin-right: 15px;
+  border: none;
+}
+
+.map-container .page-content .search-and-controls button:last-child {
+  margin-right: 0;
+}
+
+.map-container .page-content .search-and-controls .active {
+  background-color: #08182f;
+  color: white;
+  /* letter-spacing: 1px; */
+  border: 1px solid #08182f;
+}
+
+.map-container .page-content .search-container form,
+.map-container .page-content .search-container form input,
+.map-container .page-content .search-container form button {
+  width: 100%;
+}
+
+.map-container .page-content .search-container form input,
+.map-container
+  .page-content
+  .search-and-controls
+  .search-container
+  form
+  button {
+  display: block;
+}
+
+.map-container .page-content .search-container form input {
+  margin-bottom: 15px;
+}
+
+/* .map-container .page-content .search-container form button {
+  background-color: #08182f;
+  color: white;
+} */
+
+.map-container .page-content .search-container .btn-group {
+  /* display: flex; */
+  align-items: flex-end;
+  justify-content: end;
+  margin-top: 15px;
+}
+
+.map-container .page-content .search-container .btn-group .btn-container {
+  margin-right: 10px;
+}
+
+.map-container
+  .page-content
+  .search-container
+  .btn-group
+  .btn-container:last-child {
+  margin-right: 0;
+}
+
+/* .map-container
+  .page-content
+  .search-container
+  .btn-group
+  .btn-container
+  button {
+  background-color: white;
+  outline: none;
+  border: 1px solid rgba(51, 51, 51, 0.5);
+  color: #333;
+  font-size: 14px;
+  font-weight: 400;
+} */
+
+.map-container
+  .page-content
+  .search-container
+  .btn-group
+  .btn-container
+  .filter-sub-menu {
+  /* background-color: #08182f;
+  color: white; */
+  width: 320px;
+  /* width: 100%; */
+  left: -140px;
+}
+
+.map-container
+  .page-content
+  .search-container
+  .btn-group
+  .btn-container
+  .sort-sub-menu {
+  /* background-color: #08182f;
+  color: white; */
+  width: 320px;
+  /* width: 100%; */
+  /* left: -140px; */
+  right: 20%;
+}
+
+.map-container
+  .page-content
+  .search-container
+  .btn-group
+  .btn-container
+  .saf-overlay
+  .sub-menu-options
+  form
+  .grave-type-fieldset
+  .grave-type-filter
+  input,
+.map-container
+  .page-content
+  .search-container
+  .btn-group
+  .btn-container
+  .saf-overlay
+  .sub-menu-options
+  form
+  .grave-info-fieldset
+  .grave-info-sort
+  input {
+  margin: 0;
+  white-space: none;
+  text-align: right;
+  width: 13px;
 }
 
 /*=============== 

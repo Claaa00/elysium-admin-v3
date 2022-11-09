@@ -127,13 +127,12 @@
           </aside>
 
           <ul class="links">
-            <li class="active"><a href="index.html">Dashboard</a></li>
+            <li><a href="index.html">Dashboard</a></li>
             <li><a href="records.html">Records</a></li>
-            <li><a href="maps.html">Map</a></li>
+            <li class="active"><a href="maps.html">Map</a></li>
             <li><a href="#">Settings</a></li>
           </ul>
         </nav>
-
         <div class="other-container flex-items">
           <div class="search-focus">
             <form name="search">
@@ -146,6 +145,7 @@
                 onmouseout="this.value = ''; this.blur(); this.placeholder='';"
               />
             </form>
+
             <i class="fa-solid fa-magnifying-glass"></i>
           </div>
 
@@ -176,285 +176,237 @@
       </div>
     </header>
 
-    <div class="content-container">
-      <div class="page-content fixed-width">
+    <div class="content-container map-container">
+      <div class="page-content">
         <section class="page-info">
-          <h1 class="page-title">Dashboard</h1>
+          <h1 class="page-title">Maps</h1>
           <p class="page-description">
             Lorem ipsum dolor sit amet, invidunt singulis torquatos et sea,
             minim integre id sit.
           </p>
         </section>
 
-        <section class="dashboard-container">
-          <div class="statistics-grid">
-            <div class="greetings-message">
-              <h2 class="greeting">Welcome,</h2>
-              <h1 class="cemetery-name">Binan City Cemetery</h1>
-            </div>
+        <section class="search-and-controls">
+          <button class="search-btn active round-corner">Search</button>
+          <button class="controls round-corner">Controls</button>
+        </section>
 
-            <div class="statistics-container fixed-padding round-corner">
-              <h2 class="container-name">Status</h2>
+        <section class="search-container">
+          <form class="search">
+            <input
+              type="text"
+              class="input round-corner"
+              placeholder="Search.."
+              name="search2"
+            />
+            <button type="button" class="btn round-corner search-btn">
+              Search
+            </button>
+          </form>
 
-              <div class="statistics">
-                <div class="statistic round-corner">
-                  <div class="icon-container round-corner clearfix">
-                    <i class="fa-solid fa-percent icon"></i>
-                  </div>
-                  <div class="statistic-info">
-                    <h2 class="statistic-number">0,000,000</h2>
-                    <label class="statistics-label">Total Plots</label>
-                  </div>
+          <div class="btn-group">
+            <div
+              class="filter-btn-container btn-container"
+              onclick="toggleFilterBtn()"
+            >
+              <button type="button" class="btn round-corner saf-btn">
+                <i class="fa-solid fa-filter"></i>
+                Filter
+              </button>
+              <div
+                class="filter-sub-menu round-corner saf-overlay"
+                style="display: none"
+                id="filterOverlay"
+              >
+                <div class="sub-menu-title">
+                  <strong>Filter</strong>
                 </div>
 
-                <div class="statistic round-corner">
-                  <div class="icon-container round-corner clearfix">
-                    <i class="fa-solid fa-check icon"></i>
-                  </div>
+                <div class="sub-menu-options">
+                  <form>
+                    <fieldset class="block-fieldset">
+                      <legend>Block</legend>
 
-                  <div class="statistic-info">
-                    <h2 class="statistic-number">0,000,000</h2>
-                    <label class="statistics-label">Available</label>
-                  </div>
+                      <label for="filter-block">Block</label>
+                      <input
+                        list="blocks"
+                        name="filter-block"
+                        placeholder="Block"
+                      />
+                      <datalist id="blocks">
+                        <option value="Block 1"></option>
+                        <option value="Block 2"></option>
+                        <option value="Block 3"></option>
+                        <option value="Block 4"></option>
+                        <option value="Block 5"></option>
+                      </datalist>
+                    </fieldset>
+
+                    <fieldset class="grave-type-fieldset flex-items">
+                      <legend>Grave Type</legend>
+
+                      <div class="grave-type-filter flex-items">
+                        <label for="grave-type-1"> Apartment</label>
+                        <input
+                          type="checkbox"
+                          id="graveType1"
+                          name="grave-type-1"
+                          value="Apartment"
+                        />
+                      </div>
+
+                      <div class="grave-type-filter flex-items">
+                        <label for="grave-type-2"> Lawn</label>
+                        <input
+                          type="checkbox"
+                          id="graveType2"
+                          name="grave-type-2"
+                          value="Lawn"
+                        />
+                      </div>
+
+                      <div class="grave-type-filter flex-items">
+                        <label for="grave-type-3"> Mausoleum</label>
+                        <input
+                          type="checkbox"
+                          id="graveType3"
+                          name="grave-type-3"
+                          value="Mausoleum"
+                        />
+                      </div>
+                    </fieldset>
+
+                    <fieldset class="date2-fieldset">
+                      <legend id="date2">Date</legend>
+
+                      <label for="dOB2">Birth</label>
+                      <label for="dOD2">Death</label>
+
+                      <input type="month" id="dOB2" name="dOB2" />
+                      <input type="month" id="dOD2" name="dOD2" />
+                    </fieldset>
+                  </form>
                 </div>
-
-                <div class="statistic round-corner">
-                  <div class="icon-container round-corner clearfix">
-                    <i class="fa-solid fa-xmark icon"></i>
+                <div class="sub-menu-btns">
+                  <div
+                    class="sub-menu-btn border-btn round-corner"
+                    onclick="closeFilterBtn()"
+                  >
+                    Cancel
                   </div>
 
-                  <div class="statistic-info">
-                    <h2 class="statistic-number">0,000,000</h2>
-                    <label class="statistic-label">Occupied</label>
-                  </div>
-                </div>
-
-                <div class="statistic round-corner">
-                  <div class="icon-container round-corner clearfix">
-                    <i class="fa-solid fa-plus icon"></i>
-                  </div>
-
-                  <div class="statistic-info">
-                    <h2 class="statistic-number">0,000,000</h2>
-                    <label class="statistic-label">New</label>
-                  </div>
+                  <div class="sub-menu-btn clrd-btn round-corner">Save</div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <div class="latest-records-grid round-corner-colored fixed-padding">
-            <h2 class="container-name">Latest Records</h2>
-            <div class="table-container round-corner">
-              <table class="table">
-                <thead>
-                  <tr class="table-head">
-                    <th>Id</th>
-                    <th>Name</th>
-                    <th>Location</th>
-                    <th>Birth Date</th>
-                    <th>Death Date</th>
-                  </tr>
-                </thead>
-
-                <tbody>
-                  <tr class="table-body">
-                    <td>1234567890</td>
-                    <td>Juan Lazy</td>
-                    <td>
-                      41°24'12.2"N <br />
-                      2°10'26.5"E
-                    </td>
-                    <td>11-01-1990</td>
-                    <td>11-02-2020</td>
-                  </tr>
-
-                  <tr class="table-body">
-                    <td>1234567890</td>
-                    <td>Juan Lazy</td>
-                    <td>
-                      41°24'12.2"N <br />
-                      2°10'26.5"E
-                    </td>
-                    <td>11-01-1990</td>
-                    <td>11-02-2020</td>
-                  </tr>
-
-                  <tr class="table-body">
-                    <td>1234567890</td>
-                    <td>Juan Lazy</td>
-                    <td>
-                      41°24'12.2"N <br />
-                      2°10'26.5"E
-                    </td>
-                    <td>11-01-1990</td>
-                    <td>11-02-2020</td>
-                  </tr>
-
-                  <tr class="table-body">
-                    <td>1234567890</td>
-                    <td>Juan Lazy</td>
-                    <td>
-                      41°24'12.2"N <br />
-                      2°10'26.5"E
-                    </td>
-                    <td>11-01-1990</td>
-                    <td>11-02-2020</td>
-                  </tr>
-
-                  <tr class="table-body">
-                    <td>1234567890</td>
-                    <td>Juan Lazy</td>
-                    <td>
-                      41°24'12.2"N <br />
-                      2°10'26.5"E
-                    </td>
-                    <td>11-01-1990</td>
-                    <td>11-02-2020</td>
-                  </tr>
-
-                  <tr class="table-body">
-                    <td>1234567890</td>
-                    <td>Juan Lazy</td>
-                    <td>
-                      41°24'12.2"N <br />
-                      2°10'26.5"E
-                    </td>
-                    <td>11-01-1990</td>
-                    <td>11-02-2020</td>
-                  </tr>
-
-                  <tr class="table-body">
-                    <td>1234567890</td>
-                    <td>Juan Lazy</td>
-                    <td>
-                      41°24'12.2"N <br />
-                      2°10'26.5"E
-                    </td>
-                    <td>11-01-1990</td>
-                    <td>11-02-2020</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-
-          <div class="activities-grid fixed-padding round-corner-colored">
-            <h2 class="container-name">Activities</h2>
-            <div class="activity-container">
-              <div class="activities">
-                <div class="activity round-corner flex-items">
-                  <div class="activity-left">
-                    <div class="icon-container round-corner">
-                      <i class="fa-solid fa-plus icon"></i>
-                    </div>
-
-                    <div class="activity-description">
-                      <strong class="record-id">1234567890</strong>
-                      <div class="activity-tag round-corner">
-                        <label>Created</label>
-                      </div>
-                    </div>
-                  </div>
-
-                  <p class="activity-time">08:37 AM</p>
+            <div
+              class="sort-btn-container btn-container"
+              onclick="toggleSortBtn()"
+            >
+              <button type="button" class="btn round-corner saf-btn">
+                <i class="fa-solid fa-arrow-down-wide-short"></i>
+                Sort
+              </button>
+              <div
+                class="sort-sub-menu round-corner saf-overlay"
+                style="display: none"
+                id="sortOverlay"
+              >
+                <div class="sub-menu-title">
+                  <strong>Sort</strong>
                 </div>
 
-                <div class="activity round-corner flex-items">
-                  <div class="activity-left">
-                    <div class="icon-container round-corner">
-                      <i class="fa-solid fa-pen icon"></i>
-                    </div>
+                <div class="sub-menu-options">
+                  <form>
+                    <fieldset class="order-fieldset">
+                      <legend>Order</legend>
 
-                    <div class="activity-description">
-                      <strong class="record-id">1234567890</strong>
-                      <div class="activity-tag round-corner">
-                        <label>Modified</label>
+                      <label for="sort-order">Sort</label>
+                      <input
+                        list="orders"
+                        name="sort-order"
+                        placeholder="Order"
+                      />
+                      <datalist id="orders">
+                        <option value="Ascending"></option>
+                        <option value="Descending"></option>
+                      </datalist>
+                    </fieldset>
+
+                    <fieldset class="grave-info-fieldset flex-items">
+                      <legend>Grave Information</legend>
+
+                      <div class="grave-info-sort flex-items">
+                        <label for="grave-info-1"> Name</label>
+                        <input
+                          type="checkbox"
+                          id="graveInfo1"
+                          name="grave-info-1"
+                          value="Name"
+                        />
                       </div>
-                    </div>
-                  </div>
 
-                  <p class="activity-time">08:37 AM</p>
+                      <div class="grave-info-sort flex-items">
+                        <label for="grave-info-2"> Year of Birth</label>
+                        <input
+                          type="checkbox"
+                          id="graveInfo2"
+                          name="grave-info-2"
+                          value="Year of Birth"
+                        />
+                      </div>
+
+                      <div class="grave-info-sort flex-items">
+                        <label for="grave-info-3"> Year of Death</label>
+                        <input
+                          type="checkbox"
+                          id="graveInfo3"
+                          name="grave-info-3"
+                          value="Year of Death"
+                        />
+                      </div>
+
+                      <div class="grave-info-sort flex-items">
+                        <label for="grave-info-4"> Grave Type</label>
+                        <input
+                          type="checkbox"
+                          id="graveInfo4"
+                          name="grave-info-4"
+                          value="Grave Type"
+                        />
+                      </div>
+
+                      <div class="grave-info-sort flex-items">
+                        <label for="grave-info-5"> Location</label>
+                        <input
+                          type="checkbox"
+                          id="graveInfo5"
+                          name="grave-info-5"
+                          value="Location"
+                        />
+                      </div>
+                    </fieldset>
+                  </form>
                 </div>
-
-                <div class="activity round-corner flex-items">
-                  <div class="activity-left">
-                    <div class="icon-container round-corner">
-                      <i class="fa-solid fa-plus icon"></i>
-                    </div>
-
-                    <div class="activity-description">
-                      <strong class="record-id">1234567890</strong>
-                      <div class="activity-tag round-corner">
-                        <label>Created</label>
-                      </div>
-                    </div>
+                <div class="sub-menu-btns">
+                  <div
+                    class="sub-menu-btn border-btn round-corner"
+                    id="closeSortBtn"
+                  >
+                    Cancel
                   </div>
 
-                  <p class="activity-time">08:37 AM</p>
-                </div>
-
-                <div class="activity round-corner flex-items">
-                  <div class="activity-left">
-                    <div class="icon-container round-corner">
-                      <i class="fa-solid fa-pen icon"></i>
-                    </div>
-
-                    <div class="activity-description">
-                      <strong class="record-id">1234567890</strong>
-                      <div class="activity-tag round-corner">
-                        <label>Modified</label>
-                      </div>
-                    </div>
-                  </div>
-
-                  <p class="activity-time">08:37 AM</p>
-                </div>
-
-                <div class="activity round-corner flex-items">
-                  <div class="activity-left">
-                    <div class="icon-container round-corner">
-                      <i class="fa-solid fa-plus icon"></i>
-                    </div>
-
-                    <div class="activity-description">
-                      <strong class="record-id">1234567890</strong>
-                      <div class="activity-tag round-corner">
-                        <label>Created</label>
-                      </div>
-                    </div>
-                  </div>
-
-                  <p class="activity-time">08:37 AM</p>
+                  <div class="sub-menu-btn clrd-btn round-corner">Save</div>
                 </div>
               </div>
-            </div>
-          </div>
-
-          <div class="map-overview-grid fixed-padding round-corner-colored">
-            <h2 class="container-name">Map Overview</h2>
-
-            <div class="map-overview round-corner-colored">
-              <figure class="map-container">
-                <img
-                  src="/assets/images/png-clipart-printer-friendly-cemetery-history-computer-program-printing-bonaventure-cemetery-map-printerfriendly-cemetery.png"
-                  class="round-corner"
-                />
-                <a href="#">
-                  <button class="btn open-map round-corner">Open Map</button>
-                </a>
-              </figure>
             </div>
           </div>
         </section>
       </div>
     </div>
 
-    <div
-      class="overlay-container dashboard-add-overlay"
-      style="display: none"
-      id="addRecordOverlay"
-    >
+    <div class="overlay-container" style="display: none" id="addRecordOverlay">
       <div class="overlay flex-items">
         <div class="left-container">
           <h1 class="overlay-title">New Record</h1>
