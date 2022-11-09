@@ -130,6 +130,51 @@ function closeEditOverlay2() {
   }
 }
 
+function openDetailsOverlay() {
+  var x = document.getElementById("viewRecordOverlay");
+  if (x.style.display !== "none") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+
+function closeViewOverlay() {
+  var x = document.getElementById("viewRecordOverlay");
+  if (x.style.display !== "none") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+
+function closeViewOverlay2() {
+  var x = document.getElementById("viewRecordOverlay");
+  if (x.style.display !== "none") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+
+function openDeleteOverlay() {
+  var x = document.getElementById("trashMessageOverlay");
+  if (x.style.display !== "none") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+
+function closeTrashOverlay() {
+  var x = document.getElementById("trashMessageOverlay");
+  if (x.style.display !== "none") {
+    x.style.display = "none";
+  } else {
+    x.style.display = "block";
+  }
+}
+
 // const openAddOverlay = document.getElementById("openAddOverlay");
 // openAddOverlay.onclick = function () {
 //   if (addRecordOverlay.style.display !== "none") {

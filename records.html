@@ -454,8 +454,17 @@
                         Edit
                       </button>
                       <button class="more-menu-btn">Open in Map</button>
-                      <button class="more-menu-btn">View Details</button
-                      ><button class="more-menu-btn delete-btn">Delete</button>
+                      <button
+                        class="more-menu-btn"
+                        onclick="openDetailsOverlay()"
+                      >
+                        View Details</button
+                      ><button
+                        class="more-menu-btn delete-btn"
+                        onclick="openDeleteOverlay()"
+                      >
+                        Delete
+                      </button>
                     </div>
                   </td>
                 </tr>
@@ -1265,12 +1274,11 @@
 
         <div class="overlayed-btns">
           <button
-            class="overlay-btn border-btn round-corner"
-            onclick="closeAddOverlay2()"
+            class="overlay-btn clrd-btn round-corner"
+            onclick="closeViewOverlay2()"
           >
-            Cancel
+            Okay
           </button>
-          <button class="overlay-btn clrd-btn round-corner">Save</button>
         </div>
       </div>
     </div>
@@ -1296,23 +1304,23 @@
 
           <button
             class="overlay-btn border-btn round-corner"
-            onclick="closeEditOverlay()"
+            onclick="closeTrashOverlay()"
           >
             Cancel
           </button>
         </div>
 
         <!-- <div class="overlayed-btns">
-        <button
-          class="overlay-btn border-btn round-corner"
-          onclick="closeEditOverlay2()"
-        >
-          Cancel
-        </button>
-        <button class="overlay-btn clrd-btn round-corner">
-          Save changes
-        </button>
-      </div> -->
+          <button
+            class="overlay-btn border-btn round-corner"
+            onclick="closeEditOverlay2()"
+          >
+            Cancel
+          </button>
+          <button class="overlay-btn clrd-btn round-corner">
+            Save changes
+          </button>
+        </div> -->
       </div>
     </div>
 
